@@ -1,0 +1,140 @@
+
+@font-face {
+  font-family: "OpenSans";
+  src: url(../fonts/OpenSans-Bold.woff2);
+  src: url(../fonts/OpenSans-Bold.woff);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url(../fonts/OpenSans-SemiBold.woff2);
+  src: url(../fonts/OpenSans-SemiBold.woff);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url(../fonts/OpenSans-Regular.woff2);
+  src: url(../fonts/OpenSans-Regular.woff);
+  font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --white-color: #fff;
+  --focus-color: #9d5cd0;
+  --hover-color: #c283f3;
+  --active-color: #7943a4;
+  --border-color: #d1a9f0;
+  --main-color: #333;
+}
+
+body {
+  font-family: OpenSans, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1630px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn-reset {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.focus::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -2px;
+  right: -6px;
+  bottom: -2px;
+  left: -6px;
+  opacity: 0;
+  background-color: var(--focus-color);
+  transition: opacity .2s ease-in-out;
+}
+
+.states-link {
+  transition-property: opacity, color, border-bottom;
+  transition:  .1s ease-in-out;
+}
+
+.states-link::after {
+  content: "";
+  position: absolute;
+  z-index: -3;
+  top: -2px;
+  right: 0;
+  bottom: -2px;
+  left: 0;
+  opacity: 0;
+  background-color: var(--focus-color);
+  transition: opacity .2s ease-in-out;
+}
+
+.states-link:focus-visible {
+  outline: none;
+  color: var(--white-color);
+}
+
+.states-link:hover:not(:focus-visible) {
+  border-bottom: 1px solid var(--hover-color);
+}
+
+.states-link:active:not(:focus-visible) {
+  color: var(--active-color);
+  border-bottom: 1px solid var(--active-color);
+}
+
+.section-margin {
+  margin-bottom: 80px;
+}
+
+.title {
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 65px;
+  color: var(--main-color);
+}
+
+.descr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--main-color);
+}
+

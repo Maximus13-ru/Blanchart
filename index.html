@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blanchart - художественная галерея</title>
+
+  <link rel="shortcut icon" href="img/svg/favicon.svg" type="image/x-icon">
+
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.css"
+    integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+  <header class="header section-margin">
+    <div class="header-top">
+      <div class="container header-top__container">
+        <button class="open-burger__btn btn-reset">
+          <picture>
+            <source media="(max-width: 576px)" srcset="img/adaptive/header/Burger320.svg">
+            <img src="img/svg/header/Burger-1024.svg" alt="Кнопка - открыть меню">
+          </picture>
+        </button>
+        <div class="header-logo">
+          <a href="!#" class="header-logo__link">
+            <picture>
+              <source media="(max-width: 576px)" srcset="img/adaptive/header/header-logo320.svg">
+              <source media="(max-width: 1200px)" srcset="img/header/header-logo1024.png">
+              <img src="img/header/header-logo.png" alt="Бланшар - художественная галерея" class="header-logo__image">
+            </picture>
+          </a>
+        </div>
+        <nav class="header-top__nav">
+          <button class="close-burger__btn btn-reset">
+            <svg width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white" />
+              <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white" />
+            </svg>
+          </button>
+          <ul class="header-top__nav_list">
+            <li class="header-top__nav_item">
+              <a href="!#" class="header-top__nav_link focus">О нас</a>
+            </li>
+            <li class="header-top__nav_item">
+              <a href="!#" class="header-top__nav_link focus">Галерея</a>
+            </li>
+            <li class="header-top__nav_item">
+              <a href="!#" class="header-top__nav_link focus">Каталог</a>
+            </li>
+            <li class="header-top__nav_item">
+              <a href="!#" class="header-top__nav_link focus">События</a>
+            </li>
+            <li class="header-top__nav_item">
+              <a href="!#" class="header-top__nav_link focus">Издания</a>
+            </li>
+            <li class="header-top__nav_item">
+              <a href="!#" class="header-top__nav_link focus">Проекты</a>
+            </li>
+            <li class="header-top__nav_item">
+              <a href="!#" class="header-top__nav_link focus">Контакты</a>
+            </li>
+          </ul>
+          <button class="login-burger__btn btn-reset focus">
+            <svg class="header-login__image" width="13" height="13" viewиox="0 0 13 13" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+                fill="white" />
+            </svg>
+            Войти
+          </button>
+        </nav>
+        <button class="header-login__button btn-reset focus">
+          <svg class="header-login__image" width="13" height="13" viewиox="0 0 13 13" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+              fill="white" />
+          </svg>
+          Войти
+        </button>
+        <div class="header-form__content">
+          <button class="header-search__open btn-reset">
+            <picture>
+              <source media="(max-width: 576px)" srcset="img/adaptive/header/header-search-320.svg">
+              <source media="(max-width: 1200px)" srcset="img/svg/header/header-top__search.svg">
+              <img src="img/svg/header/header-search.svg" alt="" class="header-search__open--image">
+            </picture>
+          </button>
+          <form action="!#" class="header-form">
+            <button class="header-search__submit btn-reset">
+              <picture>
+                <source media="(max-width: 1200px)" srcset="img/svg/header/header-top__search.svg">
+                <img src="img/svg/header/header-search.svg" alt="" class="header-search__open--image">
+              </picture>
+            </button>
+            <input type="text" class="header-form__input" placeholder="Поиск по сайту">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="header-bot">
+      <div class="container header-bot__container">
+        <nav class="header-bot__nav">
+          <ul class="header-bot__nav_list">
+            <li class="header-bot__nav_item">
+              <button class="header-bot__item_btn btn-reset focus">
+                Реализм
+                <svg class="header-bot__item_btn-image" width="12" height="7" viewbox="0 0 12 7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L6 6L1 1" />
+                </svg>
+              </button>
+              <div class="header__dropdown-content">
+                <ul class="header__dropdown-content_list dropdown-scroll-1">
+                  <li class="header__dropdown-content_item header-dropdown-item__1-1"><a href="!#"
+                      class="header__dropdown-content_link">Тинторетто</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__1-2"><a href="!#"
+                      class="header__dropdown-content_link">Фридрих</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__1-3"><a href="!#"
+                      class="header__dropdown-content_link">Леонардо</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__1-4"><a href="!#"
+                      class="header__dropdown-content_link">Верроккье</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__1-2"><a href="!#"
+                      class="header__dropdown-content_link">Фридрих</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__1-3"><a href="!#"
+                      class="header__dropdown-content_link">Леонардо</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__1-4"><a href="!#"
+                      class="header__dropdown-content_link">Верроккье</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-bot__nav_item">
+              <button class="header-bot__item_btn btn-reset focus">
+                Импрессионизм
+                <svg class="header-bot__item_btn-image" width="12" height="7" viewbox="0 0 12 7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L6 6L1 1" />
+                </svg>
+              </button>
+              <div class="header__dropdown-content">
+                <ul class="header__dropdown-content_list dropdown-scroll-2">
+                  <li class="header__dropdown-content_item header-dropdown-item__2-1"><a href="!#"
+                      class="header__dropdown-content_link">Моне</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__2-2"><a href="!#"
+                      class="header__dropdown-content_link">Сислей</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__2-3"><a href="!#"
+                      class="header__dropdown-content_link">Мане</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__2-4"><a href="!#"
+                      class="header__dropdown-content_link">Ренуар</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__2-2"><a href="!#"
+                      class="header__dropdown-content_link">Сислей</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__2-3"><a href="!#"
+                      class="header__dropdown-content_link">Мане</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__2-4"><a href="!#"
+                      class="header__dropdown-content_link">Ренуар</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-bot__nav_item">
+              <button class="header-bot__item_btn btn-reset focus">
+                Постимпрессионизм
+                <svg class="header-bot__item_btn-image" width="12" height="7" viewbox="0 0 12 7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L6 6L1 1" />
+                </svg>
+              </button>
+              <div class="header__dropdown-content">
+                <ul class="header__dropdown-content_list dropdown-scroll-3">
+                  <li class="header__dropdown-content_item header-dropdown-item__3-1"><a href="!#"
+                      class="header__dropdown-content_link">Ван Гог</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__3-2"><a href="!#"
+                      class="header__dropdown-content_link">Сезанн</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__3-3"><a href="!#"
+                      class="header__dropdown-content_link">Гоген</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__3-4"><a href="!#"
+                      class="header__dropdown-content_link">Сёра</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__3-2"><a href="!#"
+                      class="header__dropdown-content_link">Сезанн</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__3-3"><a href="!#"
+                      class="header__dropdown-content_link">Гоген</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__3-4"><a href="!#"
+                      class="header__dropdown-content_link">Гоген</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-bot__nav_item">
+              <button class="header-bot__item_btn btn-reset focus">
+                Авангард
+                <svg class="header-bot__item_btn-image" width="12" height="7" viewbox="0 0 12 7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L6 6L1 1" />
+                </svg>
+              </button>
+              <div class="header__dropdown-content">
+                <ul class="header__dropdown-content_list dropdown-scroll-4">
+                  <li class="header__dropdown-content_item header-dropdown-item__4-1"><a href="!#"
+                      class="header__dropdown-content_link">Кандинский</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__4-2"><a href="!#"
+                      class="header__dropdown-content_link">Маринетти</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__4-3"><a href="!#"
+                      class="header__dropdown-content_link">Малевич</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__4-4"><a href="!#"
+                      class="header__dropdown-content_link">Пикассо</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__4-2"><a href="!#"
+                      class="header__dropdown-content_link">Маринетти</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__4-3"><a href="!#"
+                      class="header__dropdown-content_link">Малевич</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__4-4"><a href="!#"
+                      class="header__dropdown-content_link">Маринетти</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-bot__nav_item">
+              <button class="header-bot__item_btn btn-reset focus">
+                Футуризм
+                <svg class="header-bot__item_btn-image" width="12" height="7" viewbox="0 0 12 7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L6 6L1 1" />
+                </svg>
+              </button>
+              <div class="header__dropdown-content">
+                <ul class="header__dropdown-content_list dropdown-scroll-5">
+                  <li class="header__dropdown-content_item header-dropdown-item__5-1"><a href="!#"
+                      class="header__dropdown-content_link">Карра</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__5-2"><a href="!#"
+                      class="header__dropdown-content_link">Прателла</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__5-3"><a href="!#"
+                      class="header__dropdown-content_link">Северини</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__5-4"><a href="!#"
+                      class="header__dropdown-content_link">Балла</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__5-2"><a href="!#"
+                      class="header__dropdown-content_link">Протелла</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__5-3"><a href="!#"
+                      class="header__dropdown-content_link">Северини</a></li>
+                  <li class="header__dropdown-content_item header-dropdown-item__5-4"><a href="!#"
+                      class="header__dropdown-content_link">Балла</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <section class="section__hero">
+      <div class="swiper hero__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide hero-slide-1"></div>
+          <div class="swiper-slide hero-slide-2"></div>
+          <div class="swiper-slide hero-slide-3"></div>
+        </div>
+      </div>
+      <div class="container hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Прикоснитесь к&nbsp;прекрасному
+          </h1>
+          <p class="hero__descr">
+            Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки
+            для новых предложений.
+          </p>
+          <div class="hero-button">
+            <button class="hero__btn btn-reset">
+              Подписаться на рассылку
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </header>
+
+  <main>
+    <section class="about section-margin">
+      <div class="container">
+        <h2 class="title about__title">
+          О нас
+        </h2>
+        <p class="descr about__descr">
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+          участника как способного принимать собственные решения касаемо распределения внутренних резервов
+          и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет
+          за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что
+          высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого
+          ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов.
+          В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность
+          среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.
+        </p>
+      </div>
+    </section>
+
+    <section class="gallery section-margin">
+      <div class="container gallery__container">
+
+        <div class="gallery-content">
+          <div class="gallery-content__title">
+            <h2 class="title gallery__title">
+              Галерея
+            </h2>
+            <form class="gallery__form" action="!#">
+              <h4 class="gallery-form__title">
+                Фильтр:
+              </h4>
+              <select name="form-select" class="gallery-form__list">
+                <option value="Живопись" class="gallery-form__item">Живопись</option>
+                <option value="Рисунок" class="gallery-form__item">Рисунок</option>
+                <option value="Скульптура" class="gallery-form__item">Скульптура</option>
+              </select>
+            </form>
+            <!-- <form class="gallery__form--320" action="!#">
+              <h4 class="gallery-form__title">
+                Фильтр:
+              </h4>
+              <select name="form-select" class="gallery-form__list">
+                <option value="Живопись" class="gallery-form__item">Автор</option>
+                <option value="Рисунок" class="gallery-form__item">Направление</option>
+                <option value="Скульптура" class="gallery-form__item">Техника</option>
+              </select>
+            </form> -->
+          </div>
+          <div class="gallery-content__right">
+            <div class="swiper gallery__swiper">
+                <div class="gallery-navigation__btn">
+                  <button class="btn-reset gallery-prev gallery-btn">
+                    <img src="img/gallery/arrow-prew.svg" alt="Кнопка назад">
+                  </button>
+                  <div class="gallery-swiper__pagination"></div>
+                  <button class="btn-reset gallery-next gallery-btn">
+                    <img src="img/gallery/arrow-next.svg" alt="Кнопка вперёд">
+                  </button>
+                </div>
+                <div class="swiper-wrapper gallery-swiper__wrapper">
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_1 " tabindex="0">
+                    <picture>
+                      <source media="(max-width: 480px)" srcset="img/adaptive/gallery/320/slide1.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-1.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-1.jpg">
+                      <img src="img/gallery/gallery-slides1-1.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_2 " tabindex="0">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide2.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-2.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-2.jpg">
+                      <img src="img/gallery/gallery-slides1-2.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_3 " tabindex="0">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide3.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-3.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-3.jpg">
+                      <img src="img/gallery/gallery-slides1-3.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_4 " tabindex="0">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide4.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-4.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-4.jpg">
+                      <img src="img/gallery/gallery-slides1-4.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_5 " tabindex="0">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide5.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-1.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-1.jpg">
+                      <img src="img/gallery/gallery-slides1-5.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_6 " tabindex="0">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide6.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-2.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-2.jpg">
+                      <img src="img/gallery/gallery-slides1-6.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_7">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide7.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-3.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-3.jpg">
+                      <img src="img/gallery/gallery-slides2-1.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_8">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide8.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-4.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-4.jpg">
+                      <img src="img/gallery/gallery-slides2-2.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_9">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide9.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-1.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-1.jpg">
+                      <img src="img/gallery/gallery-slides2-3.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_10">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide10.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-2.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-2.jpg">
+                      <img src="img/gallery/gallery-slides2-4.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_11">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide11.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-3.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-3.jpg">
+                      <img src="img/gallery/gallery-slides2-5.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_12">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide12.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-4.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-4.jpg">
+                      <img src="img/gallery/gallery-slides2-6.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_13">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide13.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-1.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-1.jpg">
+                      <img src="img/gallery/gallery-slides3-1.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_14">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide14.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-2.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-2.jpg">
+                      <img src="img/gallery/gallery-slides3-2.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_15">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide15.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-3.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-3.jpg">
+                      <img src="img/gallery/gallery-slides3-3.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_16">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide16.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-4.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-4.jpg">
+                      <img src="img/gallery/gallery-slides3-4.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_17">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide17.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-1.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-1.jpg">
+                      <img src="img/gallery/gallery-slides3-5.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_18">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide18.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-2.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-2.jpg">
+                      <img src="img/gallery/gallery-slides3-6.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_19">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide19.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-3.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-3.jpg">
+                      <img src="img/gallery/gallery-slides4-1.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_20">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide20.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-4.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-4.jpg">
+                      <img src="img/gallery/gallery-slides4-2.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_21">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide21.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-1.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-1.jpg">
+                      <img src="img/gallery/gallery-slides4-3.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_22">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide22.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-2.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-2.jpg">
+                      <img src="img/gallery/gallery-slides4-4.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_23">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide23.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-3.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-3.jpg">
+                      <img src="img/gallery/gallery-slides4-5.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_24">
+                    <picture>
+                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide24.jpg">
+                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-4.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-4.jpg">
+                      <img src="img/gallery/gallery-slides4-6.jpg" alt="Картина художника" class="gallery-slide__image">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <p class="descr gallery__descr">
+            Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний <a href="!#"
+              class="gallery-descr__link states-link">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+          </p>
+        </div>
+        <!-- <div class="gallery-content__left">
+          <h2 class="title gallery__title">
+            Галерея
+          </h2>
+          <form class="gallery__form" action="!#">
+            <h4 class="gallery-form__title">
+              Фильтр:
+            </h4>
+            <select name="form-select" class="gallery-form__list">
+              <option value="Живопись" class="gallery-form__item">Живопись</option>
+              <option value="Рисунок" class="gallery-form__item">Рисунок</option>
+              <option value="Скульптура" class="gallery-form__item">Скульптура</option>
+            </select>
+          </form>
+          <p class="descr gallery__descr">
+            Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний <a href="!#"
+              class="gallery-descr__link states-link">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+          </p>
+        </div>
+        <div class="gallery-content__right">
+          <div class="swiper gallery__swiper">
+              <div class="gallery-navigation__btn">
+                <button class="btn-reset gallery-prev gallery-btn">
+                  <img src="img/gallery/arrow-prew.svg" alt="Кнопка назад">
+                </button>
+                <div class="gallery-swiper__pagination"></div>
+                <button class="btn-reset gallery-next gallery-btn">
+                  <img src="img/gallery/arrow-next.svg" alt="Кнопка вперёд">
+                </button>
+              </div>
+              <div class="swiper-wrapper gallery-swiper__wrapper">
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_1 " tabindex="0">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-1.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-1.jpg">
+                    <img src="img/gallery/gallery-slides1-1.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_2 " tabindex="0">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-2.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-2.jpg">
+                    <img src="img/gallery/gallery-slides1-2.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_3 " tabindex="0">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-3.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-3.jpg">
+                    <img src="img/gallery/gallery-slides1-3.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_4 " tabindex="0">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-4.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-4.jpg">
+                    <img src="img/gallery/gallery-slides1-4.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_5 " tabindex="0">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-1.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-1.jpg">
+                    <img src="img/gallery/gallery-slides1-5.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_6 " tabindex="0">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-2.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-2.jpg">
+                    <img src="img/gallery/gallery-slides1-6.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_7">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-3.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-3.jpg">
+                    <img src="img/gallery/gallery-slides2-1.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_8">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-4.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-4.jpg">
+                    <img src="img/gallery/gallery-slides2-2.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_9">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-1.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-1.jpg">
+                    <img src="img/gallery/gallery-slides2-3.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_10">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-2.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-2.jpg">
+                    <img src="img/gallery/gallery-slides2-4.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_11">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-3.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-3.jpg">
+                    <img src="img/gallery/gallery-slides2-5.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_12">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-4.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-4.jpg">
+                    <img src="img/gallery/gallery-slides2-6.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_13">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-1.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-1.jpg">
+                    <img src="img/gallery/gallery-slides3-1.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_14">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-2.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-2.jpg">
+                    <img src="img/gallery/gallery-slides3-2.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_15">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-3.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-3.jpg">
+                    <img src="img/gallery/gallery-slides3-3.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_16">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-4.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-4.jpg">
+                    <img src="img/gallery/gallery-slides3-4.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_17">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-1.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-1.jpg">
+                    <img src="img/gallery/gallery-slides3-5.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_18">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-2.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-2.jpg">
+                    <img src="img/gallery/gallery-slides3-6.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_19">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-3.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-3.jpg">
+                    <img src="img/gallery/gallery-slides4-1.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_20">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-4.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-4.jpg">
+                    <img src="img/gallery/gallery-slides4-2.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_21">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-1.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-1.jpg">
+                    <img src="img/gallery/gallery-slides4-3.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_22">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-2.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-2.jpg">
+                    <img src="img/gallery/gallery-slides4-4.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_23">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-3.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-3.jpg">
+                    <img src="img/gallery/gallery-slides4-5.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+                <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_24">
+                  <picture>
+                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-4.jpg">
+                    <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-4.jpg">
+                    <img src="img/gallery/gallery-slides4-6.jpg" alt="Картина художника" class="gallery-slide__image">
+                  </picture>
+                </div>
+              </div>
+            </div>
+        </div> -->
+      </div>
+      </section>
+  </main>
+
+
+
+
+  <script src="js/choices.min.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js"
+    integrity="sha512-rn0CaCtyheymRT43p0ZuFH0SvNriLU5cuJpY2f4IcyLrbHzJdsIF1dygi9oNha1BhHagO8U+h2xRWCosYf9gCg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
