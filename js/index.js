@@ -95,20 +95,31 @@ document.addEventListener("click", function(e) {
 })
 })
 
-//header form search
-
-document.querySelector(".header-search__open").addEventListener("click", function() {
-  document.querySelector(".header-form").classList.add("header-form__active");
+// стрелка на ххэдер бот
+document.querySelector(".header-bot__item_btn").addEventListener("click", function() {
+  document.querySelector(".header-bot__item_btn-image").classList.add("header-bot__item_btn-image--active");
   this.classList.add("active");
 })
 
 
-//не получилось скрыть при клике на поиск лого и бургер
-// document.querySelector(".header-search__open").addEventListener("click", function() {
-//   document.querySelector(".open-burger__btn").classList.add(".search-open");
-//   document.querySelector(".header-logo").classList.add(".search-open");
-//   this.classList.add("active");
+//header form search
+
+document.querySelector(".header-search__open").addEventListener("click", function() {
+  document.querySelector(".header-form").classList.add("header-form__active");
+  document.querySelector(".header-logo").classList.add("header-logo__none");
+  document.querySelector(".open-burger__btn").classList.add("open-burger__btn--none");
+  document.querySelector(".header-search__close").classList.add("header-search__close--block")
+  this.classList.add("active");
+})
+
+//попытки скрыть крестик при клике
+// document.querySelector(".header-search__close").addEventListener("click", function() {
+//   document.querySelector(".header-form").classList.remove("header-form__active");
+//   document.querySelector(".header-search__close").classList.remove("header-search__close--block");
+//   document.querySelector(".header-search__open").classList.remove("active");
+
 // })
+
 
 document.addEventListener("click", function(e) {
   let target = e.target;
@@ -121,6 +132,31 @@ document.addEventListener("click", function(e) {
 })
 
 
+//возвращается логотип по клику на экран
+document.addEventListener("click", function(e) {
+  let target = e.target;
+  let logo = document.querySelector(".header-logo");
+  if (!target.closest(".header-form__content")) {
+  logo.classList.remove("header-logo__none");
+    document.querySelector(".header-search__open").classList.remove("active")
+  }
+})
+
+//возвращается кнопка бургера по клику на экран
+document.addEventListener("click", function(e) {
+  let target = e.target;
+  let burgerBtn = document.querySelector(".open-burger__btn");
+  if (!target.closest(".header-form__content")) {
+    burgerBtn.classList.remove("open-burger__btn--none");
+    document.querySelector(".header-search__open").classList.remove("active")
+  }
+})
+
+
+
+
+
+
 // gallery select
 
 const element = document.querySelector('.gallery-form__list');
@@ -128,11 +164,18 @@ const element = document.querySelector('.gallery-form__list');
       searchEnabled: false
     });
 
+const element1 = document.querySelector('.gallery-form__list--320');
+    const choices1 = new Choices(element1, {
+      searchEnabled: false
+    });
+
+
+
 
 
 //gallery swiper
 
-let gallerySwiper = new Swiper(".gallery__swiper", {
+const gallerySwiper = new Swiper(".gallery__swiper", {
   slidesPerView: 3,
   slidesPerGroup: 3,
   grid: {
@@ -158,21 +201,21 @@ let gallerySwiper = new Swiper(".gallery__swiper", {
       spaceBetween: 0
     },
 
-    500: {
-      slidesPerView: 2,
-      grid: {
-        rows: 2,
-      },
-      spaceBetween: 20
-    },
-
-    // 576: {
+    // 500: {
     //   slidesPerView: 2,
     //   grid: {
-    //     rows: 2,
+    //     rows: 1,
     //   },
-    //   spaceBetween: 30,
+    //   spaceBetween: 20
     // },
+
+     576: {
+       slidesPerView: 2,
+       grid: {
+         rows: 1,
+       },
+       spaceBetween: 30,
+     },
 
      700: {
       slidesPerView: 2,
@@ -212,4 +255,192 @@ let gallerySwiper = new Swiper(".gallery__swiper", {
   //     });
   //   }
   // }
+});
+
+
+//tabs catalog
+
+// document.addEventListener ('DOMContentLoaded', function() {
+//   document.querySelectorAll('.title-row__btn').forEach(function(tabsBtn) {
+//     tabsBtn.addEventListener('click', function(event) {
+//       const path = event.currentTarget.dataset.path
+
+//       document.querySelectorAll('.catalog-main').forEach(function(tabContent) {
+//         tabContent.classList.remove('visible')
+//     })
+//     document.querySelector(`[data-target="${path}"]`).classList.add('visible')
+//   })
+//   })
+// })
+
+// document.addEventListener ('DOMContentLoaded', function() {
+//   document.querySelectorAll('.catalog-accordion__btn--tabs').forEach(function(tabsBtn) {
+//     tabsBtn.addEventListener('click', function(event) {
+//       const path = event.currentTarget.dataset.path
+
+//       document.querySelectorAll('.catalog-content__left').forEach(function(tabContent) {
+//         tabContent.classList.remove('visible')
+//     })
+//     document.querySelector(`[data-target="${path}"]`).classList.add('visible')
+//   })
+//   })
+// })
+
+ document.addEventListener("DOMContentLoaded", function() {
+   function tabsActive(tabPath, tabTarget) {
+     document.querySelectorAll(tabPath).forEach(item => {
+     item.addEventListener("click", function(e) {
+       let path = e.currentTarget.dataset.path;
+       document.querySelectorAll(tabTarget).forEach(el => {
+         el.classList.remove("visible");
+       });
+       document.querySelectorAll(tabPath).forEach(el => {
+         el.classList.remove("visible");
+       });
+       document.querySelector(`[data-target="${path}"]`).classList.add("visible");
+
+       this.classList.add("visible");
+     })
+   });
+   };
+   tabsActive(".title-row__btn", ".catalog-main");
+   tabsActive(".catalog-accordion__btn--tabs", ".catalog-content__left");
+ })
+
+// accordion catalog
+
+$(function () {
+  $(".accordion-plug").accordion();
+});
+
+$(function () {
+  $("#accordion").accordion();
+});
+
+$( "#accordion" ).accordion({
+  heightStyle: "contant"
+});
+
+const heightStyle = $( "#accordion" ).accordion( "option", "heightStyle" );
+
+
+//events
+
+const eventsSwiper = new Swiper(".events-swiper", {
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  loop: true,
+  grid: {
+    rows: 1,
+  },
+  spaceBetween: 50,
+  pagination: {
+    el: ".events-swiper__pagination",
+   // type: "bullets",
+   // clickable: true,
+  },
+  navigation: {
+    nextEl: ".events-next",
+    prevEl: ".events-prev"
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      grid: {
+        rows: 1,
+      },
+      spaceBetween: 0,
+    },
+
+    450: {
+      slidesPerView: 2,
+      grid: {
+        rows: 1,
+      },
+      spaceBetween: 34,
+    },
+
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      grid: {
+        rows: 1,
+      },
+      spaceBetween: 34,
+    },
+
+     1024: {
+       slidesPerView: 3,
+       slidesPerGroup: 3,
+       grid: {
+         rows: 1
+       },
+       spaceBetween: 27,
+     },
+    },
+
+   a11y: {
+     prevSlideMessage: 'Предыдущий',
+     nextSlideMessage: 'Следующий',
+   }
+
+  // on: {
+  //   /* исправляет баг с margin-top остающимся при смене брейкпоинта, это было нужно в 6-й версии свайпера */
+  //   beforeResize: function () {
+  //     this.slides.forEach((el) => {
+  //       el.style.marginTop = "";
+  //     });
+  //   }
+  // }
+});
+
+// public
+
+const publicSwiper = new Swiper(".public__swiper", {
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  grid: {
+    rows: 1,
+  },
+
+  spaceBetween: 50,
+
+  pagination: {
+     el: ".public-pagination",
+     type: "fraction",
+     clickable: true,
+  },
+
+  navigation: {
+    nextEl: ".public-next",
+    prevEl: ".public-prev"
+  },
+
+});
+
+
+//public spoiler
+
+let btn = document.querySelector(".form-categories__title");
+let checklist = document.querySelector(".form-categories__list");
+btn.addEventListener("click", function() {
+  checklist.classList.toggle("form-categories__list--active");
+  document.querySelectorAll(".form-categories__label").forEach(el => {
+    el.classList.toggle("active");
+    let checkbox = el.querySelector(".form-categories__input");
+
+    if (checkbox.checked) {
+      el.classList.add("active");
+    }
+  })
+});
+
+document.querySelectorAll(".form-categories__label").forEach(el => {
+  el.addEventListener("click", function() {
+    let label = this;
+    if (!checklist.classList.contains("form-categories__list--active")) {
+      label.classList.remove("active");
+    }
+  });
 });

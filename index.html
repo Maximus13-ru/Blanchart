@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="css/style.css">
 
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -27,18 +30,15 @@
     <div class="header-top">
       <div class="container header-top__container">
         <button class="open-burger__btn btn-reset">
-          <picture>
-            <source media="(max-width: 576px)" srcset="img/adaptive/header/Burger320.svg">
-            <img src="img/svg/header/Burger-1024.svg" alt="Кнопка - открыть меню">
-          </picture>
+          <svg width="36" height="29" viewbox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.700012)" fill="white" />
+            <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white" />
+            <path d="M24 25.0479H0V28.7H24V25.0479Z" fill="white" />
+          </svg>
         </button>
         <div class="header-logo">
           <a href="!#" class="header-logo__link">
-            <picture>
-              <source media="(max-width: 576px)" srcset="img/adaptive/header/header-logo320.svg">
-              <source media="(max-width: 1200px)" srcset="img/header/header-logo1024.png">
-              <img src="img/header/header-logo.png" alt="Бланшар - художественная галерея" class="header-logo__image">
-            </picture>
+            <img src="img/header/header-logo.png" alt="Blanchart - художественная галерея" class="header-logo__image">
           </a>
         </div>
         <nav class="header-top__nav">
@@ -72,7 +72,7 @@
             </li>
           </ul>
           <button class="login-burger__btn btn-reset focus">
-            <svg class="header-login__image" width="13" height="13" viewиox="0 0 13 13" fill="none"
+            <svg class="header-login__image" width="13" height="13" viewbox="0 0 13 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
@@ -92,20 +92,73 @@
         </button>
         <div class="header-form__content">
           <button class="header-search__open btn-reset">
-            <picture>
-              <source media="(max-width: 576px)" srcset="img/adaptive/header/header-search-320.svg">
-              <source media="(max-width: 1200px)" srcset="img/svg/header/header-top__search.svg">
-              <img src="img/svg/header/header-search.svg" alt="" class="header-search__open--image">
-            </picture>
+            <svg class="header-search__image--1920" width="23" height="22" viewbox="0 0 23 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                fill="white" />
+            </svg>
+            <svg class="header-search__image--1024" width="30" height="29" viewbox="0 0 30 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect width="9.15446" height="2.28862"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79501 20.8721 2.79501 13.5104C2.79501 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
+                fill="white" />
+            </svg>
+            <svg class="header-search__image--320" width="18" height="19" viewbox="0 0 18 19" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M16.0002 8C16.0002 11.3137 13.3139 14 10.0002 14C6.68648 14 4.00019 11.3137 4.00019 8C4.00019 4.68629 6.68648 2 10.0002 2C13.3139 2 16.0002 4.68629 16.0002 8ZM18.0002 8C18.0002 12.4183 14.4185 16 10.0002 16C8.15297 16 6.45197 15.3739 5.09782 14.3224L1.41617 18.0041L0.00195312 16.5898L3.68288 12.9089C2.62828 11.5537 2.00019 9.8502 2.00019 8C2.00019 3.58172 5.58191 0 10.0002 0C14.4185 0 18.0002 3.58172 18.0002 8Z"
+                fill="white" />
+            </svg>
           </button>
-          <form action="!#" class="header-form">
+          <form class="header-form">
             <button class="header-search__submit btn-reset">
-              <picture>
-                <source media="(max-width: 1200px)" srcset="img/svg/header/header-top__search.svg">
-                <img src="img/svg/header/header-search.svg" alt="" class="header-search__open--image">
-              </picture>
+              <svg class="header-search__image--submit-1920" width="23" height="22" viewbox="0 0 23 22" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="6.8678" height="1.71695"
+                  transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                  fill="white" />
+              </svg>
+              <svg class="header-search__image--submit-1024" width="30" height="29" viewbox="0 0 30 29" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="9.15446" height="2.28862"
+                  transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79501 20.8721 2.79501 13.5104C2.79501 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
+                  fill="white" />
+              </svg>
+              <svg class="header-search__image--submit-320" width="18" height="19" viewbox="0 0 18 19" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.0002 8C16.0002 11.3137 13.3139 14 10.0002 14C6.68648 14 4.00019 11.3137 4.00019 8C4.00019 4.68629 6.68648 2 10.0002 2C13.3139 2 16.0002 4.68629 16.0002 8ZM18.0002 8C18.0002 12.4183 14.4185 16 10.0002 16C8.15297 16 6.45197 15.3739 5.09782 14.3224L1.41617 18.0041L0.00195312 16.5898L3.68288 12.9089C2.62828 11.5537 2.00019 9.8502 2.00019 8C2.00019 3.58172 5.58191 0 10.0002 0C14.4185 0 18.0002 3.58172 18.0002 8Z"
+                  fill="white" />
+              </svg>
             </button>
             <input type="text" class="header-form__input" placeholder="Поиск по сайту">
+            <button class="header-search__close btn-reset">
+              <svg class="header-search__close--big" width="29" height="29" viewbox="0 0 29 29" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.7">
+                  <rect width="37.2801" height="3.72801"
+                    transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.63867 0)" fill="white" />
+                  <rect width="37.2801" height="3.72801"
+                    transform="matrix(0.707093 -0.707121 0.707093 0.707121 -0.000976562 26.3615)" fill="white" />
+                </g>
+              </svg>
+              <svg class="header-search__close--small" width="15" height="15" viewbox="0 0 15 15" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="19.2824" height="1.92824"
+                  transform="matrix(0.707093 0.707121 -0.707093 0.707121 1.36523 0.00152588)" fill="white" />
+                <rect width="19.2824" height="1.92824"
+                  transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 13.6365)" fill="white" />
+              </svg>
+            </button>
           </form>
         </div>
       </div>
@@ -300,7 +353,7 @@
       </div>
     </section>
 
-    <section class="gallery section-margin">
+    <section class="gallery section-margin" id="gallery">
       <div class="container gallery__container">
 
         <div class="gallery-content">
@@ -308,7 +361,7 @@
             <h2 class="title gallery__title">
               Галерея
             </h2>
-            <form class="gallery__form" action="!#">
+            <form class="gallery__form gallery__form--1920" action="!#">
               <h4 class="gallery-form__title">
                 Фильтр:
               </h4>
@@ -318,250 +371,24 @@
                 <option value="Скульптура" class="gallery-form__item">Скульптура</option>
               </select>
             </form>
-            <!-- <form class="gallery__form--320" action="!#">
+            <p class="descr gallery__descr gallery-left-descr">
+              Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний <a href="!#"
+                class="gallery-descr__link states-link">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+            </p>
+            <form class="gallery__form gallery__form--320" action="!#">
               <h4 class="gallery-form__title">
                 Фильтр:
               </h4>
-              <select name="form-select" class="gallery-form__list">
+              <select name="form-select" class="gallery-form__list gallery-form__list--320">
                 <option value="Живопись" class="gallery-form__item">Автор</option>
                 <option value="Рисунок" class="gallery-form__item">Направление</option>
                 <option value="Скульптура" class="gallery-form__item">Техника</option>
               </select>
-            </form> -->
+            </form>
+
           </div>
           <div class="gallery-content__right">
             <div class="swiper gallery__swiper">
-                <div class="gallery-navigation__btn">
-                  <button class="btn-reset gallery-prev gallery-btn">
-                    <img src="img/gallery/arrow-prew.svg" alt="Кнопка назад">
-                  </button>
-                  <div class="gallery-swiper__pagination"></div>
-                  <button class="btn-reset gallery-next gallery-btn">
-                    <img src="img/gallery/arrow-next.svg" alt="Кнопка вперёд">
-                  </button>
-                </div>
-                <div class="swiper-wrapper gallery-swiper__wrapper">
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_1 " tabindex="0">
-                    <picture>
-                      <source media="(max-width: 480px)" srcset="img/adaptive/gallery/320/slide1.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-1.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-1.jpg">
-                      <img src="img/gallery/gallery-slides1-1.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_2 " tabindex="0">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide2.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-2.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-2.jpg">
-                      <img src="img/gallery/gallery-slides1-2.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_3 " tabindex="0">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide3.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-3.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-3.jpg">
-                      <img src="img/gallery/gallery-slides1-3.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_4 " tabindex="0">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide4.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-4.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-4.jpg">
-                      <img src="img/gallery/gallery-slides1-4.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_5 " tabindex="0">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide5.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-1.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-1.jpg">
-                      <img src="img/gallery/gallery-slides1-5.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_6 " tabindex="0">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide6.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-2.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-2.jpg">
-                      <img src="img/gallery/gallery-slides1-6.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_7">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide7.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-3.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-3.jpg">
-                      <img src="img/gallery/gallery-slides2-1.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_8">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide8.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-4.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-4.jpg">
-                      <img src="img/gallery/gallery-slides2-2.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_9">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide9.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-1.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-1.jpg">
-                      <img src="img/gallery/gallery-slides2-3.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_10">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide10.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-2.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-2.jpg">
-                      <img src="img/gallery/gallery-slides2-4.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_11">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide11.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-3.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-3.jpg">
-                      <img src="img/gallery/gallery-slides2-5.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_12">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide12.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-4.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-4.jpg">
-                      <img src="img/gallery/gallery-slides2-6.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_13">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide13.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-1.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-1.jpg">
-                      <img src="img/gallery/gallery-slides3-1.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_14">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide14.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-2.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-2.jpg">
-                      <img src="img/gallery/gallery-slides3-2.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_15">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide15.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-3.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-3.jpg">
-                      <img src="img/gallery/gallery-slides3-3.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_16">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide16.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-4.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-4.jpg">
-                      <img src="img/gallery/gallery-slides3-4.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_17">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide17.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-1.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-1.jpg">
-                      <img src="img/gallery/gallery-slides3-5.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_18">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide18.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-2.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-2.jpg">
-                      <img src="img/gallery/gallery-slides3-6.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_19">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide19.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-3.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-3.jpg">
-                      <img src="img/gallery/gallery-slides4-1.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_20">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide20.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-4.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-4.jpg">
-                      <img src="img/gallery/gallery-slides4-2.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_21">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide21.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-1.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-1.jpg">
-                      <img src="img/gallery/gallery-slides4-3.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_22">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide22.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-2.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-2.jpg">
-                      <img src="img/gallery/gallery-slides4-4.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_23">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide23.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-3.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-3.jpg">
-                      <img src="img/gallery/gallery-slides4-5.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                  <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_24">
-                    <picture>
-                      <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide24.jpg">
-                      <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-4.jpg">
-                      <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-4.jpg">
-                      <img src="img/gallery/gallery-slides4-6.jpg" alt="Картина художника" class="gallery-slide__image">
-                    </picture>
-                  </div>
-                </div>
-              </div>
-          </div>
-          <p class="descr gallery__descr">
-            Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний <a href="!#"
-              class="gallery-descr__link states-link">авторизуйтесь</a>, либо воспользуйтесь лицензией.
-          </p>
-        </div>
-        <!-- <div class="gallery-content__left">
-          <h2 class="title gallery__title">
-            Галерея
-          </h2>
-          <form class="gallery__form" action="!#">
-            <h4 class="gallery-form__title">
-              Фильтр:
-            </h4>
-            <select name="form-select" class="gallery-form__list">
-              <option value="Живопись" class="gallery-form__item">Живопись</option>
-              <option value="Рисунок" class="gallery-form__item">Рисунок</option>
-              <option value="Скульптура" class="gallery-form__item">Скульптура</option>
-            </select>
-          </form>
-          <p class="descr gallery__descr">
-            Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний <a href="!#"
-              class="gallery-descr__link states-link">авторизуйтесь</a>, либо воспользуйтесь лицензией.
-          </p>
-        </div>
-        <div class="gallery-content__right">
-          <div class="swiper gallery__swiper">
               <div class="gallery-navigation__btn">
                 <button class="btn-reset gallery-prev gallery-btn">
                   <img src="img/gallery/arrow-prew.svg" alt="Кнопка назад">
@@ -574,177 +401,1116 @@
               <div class="swiper-wrapper gallery-swiper__wrapper">
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_1 " tabindex="0">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-1.jpg">
+                    <source media="(max-width: 480px)" srcset="img/adaptive/gallery/320/slide1.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide1-1.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-1.jpg">
                     <img src="img/gallery/gallery-slides1-1.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_2 " tabindex="0">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-2.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide2.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide1-2.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-2.jpg">
                     <img src="img/gallery/gallery-slides1-2.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_3 " tabindex="0">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-3.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide3.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide1-3.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-3.jpg">
                     <img src="img/gallery/gallery-slides1-3.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_4 " tabindex="0">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide1-4.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide4.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide1-4.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide1-4.jpg">
                     <img src="img/gallery/gallery-slides1-4.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_5 " tabindex="0">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-1.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide5.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide2-1.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-1.jpg">
                     <img src="img/gallery/gallery-slides1-5.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_6 " tabindex="0">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-2.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide6.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide2-2.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-2.jpg">
                     <img src="img/gallery/gallery-slides1-6.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_7">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-3.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide7.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide2-3.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-3.jpg">
                     <img src="img/gallery/gallery-slides2-1.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_8">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide2-4.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide8.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide2-4.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide2-4.jpg">
                     <img src="img/gallery/gallery-slides2-2.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_9">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-1.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide9.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide3-1.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-1.jpg">
                     <img src="img/gallery/gallery-slides2-3.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_10">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-2.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide10.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide3-2.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-2.jpg">
                     <img src="img/gallery/gallery-slides2-4.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_11">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-3.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide11.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide3-3.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-3.jpg">
                     <img src="img/gallery/gallery-slides2-5.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_12">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide3-4.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide12.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide3-4.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide3-4.jpg">
                     <img src="img/gallery/gallery-slides2-6.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_13">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-1.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide13.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide4-1.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-1.jpg">
                     <img src="img/gallery/gallery-slides3-1.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_14">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-2.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide14.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide4-2.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-2.jpg">
                     <img src="img/gallery/gallery-slides3-2.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_15">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-3.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide15.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide4-3.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-3.jpg">
                     <img src="img/gallery/gallery-slides3-3.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_16">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide4-4.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide16.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide4-4.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide4-4.jpg">
                     <img src="img/gallery/gallery-slides3-4.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_17">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-1.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide17.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide5-1.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-1.jpg">
                     <img src="img/gallery/gallery-slides3-5.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_18">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-2.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide18.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide5-2.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-2.jpg">
                     <img src="img/gallery/gallery-slides3-6.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_19">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-3.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide19.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide5-3.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-3.jpg">
                     <img src="img/gallery/gallery-slides4-1.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_20">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide5-4.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide20.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide5-4.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide5-4.jpg">
                     <img src="img/gallery/gallery-slides4-2.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_21">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-1.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide21.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide6-1.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-1.jpg">
                     <img src="img/gallery/gallery-slides4-3.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_22">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-2.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide22.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide6-2.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-2.jpg">
                     <img src="img/gallery/gallery-slides4-4.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_23">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-3.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide23.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide6-3.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-3.jpg">
                     <img src="img/gallery/gallery-slides4-5.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
                 <div class="swiper-slide gallery-swiper__slide gallery-swiper__slide_24">
                   <picture>
-                    <source media="(max-width: 992px)" srcset="img/adaptive/gallery/768/gallery-slide6-4.jpg">
+                    <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide24.jpg">
+                    <source media="(max-width: 1023px)" srcset="img/adaptive/gallery/768/gallery-slide6-4.jpg">
                     <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/slide6-4.jpg">
                     <img src="img/gallery/gallery-slides4-6.jpg" alt="Картина художника" class="gallery-slide__image">
                   </picture>
                 </div>
               </div>
             </div>
-        </div> -->
+            <p class="descr gallery__descr gallery-right-descr">
+              Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний <a href="!#"
+                class="gallery-descr__link states-link">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+            </p>
+          </div>
+        </div>
       </div>
-      </section>
+    </section>
+
+    <section class="catalog section-margin">
+      <div class="container catalog__container">
+        <div class="title-row">
+          <h2 class="title catalog__title">Каталог</h2>
+          <div class="title-row__btns">
+            <button class="title-row__btn--tabs title-row__btn btn-reset title-row__btn--france"
+              data-path="plug-active"></button>
+            <button class="title-row__btn--tabs title-row__btn btn-reset title-row__btn--germany"
+              data-path="plug-active"></button>
+            <button class="title-row__btn--tabs title-row__btn btn-reset title-row__btn--italy"
+              data-path="active"></button>
+            <button class="title-row__btn--tabs title-row__btn btn-reset title-row__btn--russia"
+              data-path="plug-active"></button>
+            <button class="title-row__btn--tabs title-row__btn btn-reset title-row__btn--belgique"
+              data-path="plug-active"></button>
+          </div>
+        </div>
+        <!-- блок с контентом-->
+        <div class="catalog-main visible" data-target="active">
+          <p class="descr catalog-main__descr">
+            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+            политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего
+            лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии
+            и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены
+            на&nbsp;независимые элементы.
+          </p>
+          <div class="catalog-content">
+            <div class="catalog-content__left" data-target="plugArt">
+              <picture>
+                <source media="(max-width: 320px)" srcset="img/adaptive/catalog/tabs-plug-item-320.jpg">
+                <source media="(max-width: 768px)" srcset="img/adaptive/catalog/tabs-plug-item-768.jpg">
+                <source media="(max-width: 1024px)" srcset="img/adaptive/catalog/tabs-plug-item-1024.jpg">
+                <img src="img/catalog/left-plug.jpg" alt="Изображение художника" class="catalog-content__left--image">
+              </picture>
+              <h3 class="subtitle catalog-content__left--title">Что мы о нём знаем?</h3>
+              <p class="descr catalog-content__left--descr">
+                Пока ничего...Зато мы точно знаем, что в галерее есть на что посмотреть!
+              </p>
+              <a href="#gallery" class="item-plug__link states-link">В галерею</a>
+            </div>
+            <div class="catalog-content__left visible" data-target="activeAtr">
+              <picture>
+                <source media="(max-width: 320px)" srcset="img/adaptive/catalog/domenico-left-320.jpg">
+                <source media="(max-width: 768px)" srcset="img/adaptive/catalog/domenico-left-768.jpg">
+                <source media="(max-width: 1024px)" srcset="img/adaptive/catalog/domenico-left-1024.jpg">
+                <img src="img/catalog/domenico-left.jpg" alt="Изображение художника"
+                  class="catalog-content__left--image">
+              </picture>
+              <h3 class="subtitle catalog-content__left--title">Доменико Гирландайо</h3>
+              <span class="catalog-content__left--years">2 июня 1448 — 11 января 1494.</span>
+              <p class="descr catalog-content__left--descr">
+                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело
+                в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых
+                выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+                (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+              </p>
+            </div>
+            <div class="catalog-content__right catalog-accordion">
+              <ul class="catalog-accordion__list" id="accordion">
+                <li class="catalog-accordion__item item-content">
+                  <h3 class="subtitle catalog-accordion__item--subtitle accordion-subtitle">
+                    <span class="accordion-subtitle__text">С 1400 по 1499 гг.</span>
+                    <span class="accordion-subtitle__image"></span>
+                  </h3>
+                  <ul class="item-content__list">
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs focus"
+                        data-path="plugArt">Бенедетто ди Биндо</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Бергоньоне, Амброджо</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Биссоло, Франческо</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Больтраффио, Джованни</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Бонсиньори, Франческо</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Боттичини, Рафаэлло</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Брамантино</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Бреа, Людовико</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Бьяджо д'Антонио Туччи</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Веккьетта</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Андреа Верроккье</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="activeAtr">Доменико Гирландайо</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Беноццо Гоццоли</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Граначчи, Франческо</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Грегорио ди Чекко</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Джованни да Удине</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Джованни ди Паоло</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Джорджоне</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Парентино, Бернардо</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Пезеллино</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Пьетро Перуджино</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Перуцци, Бальдассаре</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Пизанелло</button>
+                    </li>
+                    <li class="item-content__element">
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
+                        data-path="plugArt">Пинтуриккьо</button>
+                    </li>
+                  </ul>
+                </li>
+                <li class="catalog-accordion__item catalog-accordion__item--plug item-plug item-content">
+                  <h3 class="subtitle catalog-accordion__item--subtitle accordion-subtitle">
+                    <span class="accordion-subtitle__text">С 1500 по 1599 гг.</span>
+                    <span class="accordion-subtitle__image"></span>
+                  </h3>
+                  <div class="item-plug__content">
+                    <picture>
+                      <source media="(max-width: 576px)" srcset="img/adaptive/catalog/accordion-plug-item-320.jpg">
+                      <source media="(max-width: 768px)" srcset="img/adaptive/catalog/accordion-plug-item-768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/catalog/accordion-plug-item-1024.jpg">
+                      <img class="item-plug__image" src="img/catalog/accordion-plug-item.jpg" alt="Пустое изображение">
+                    </picture>
+                    <div class="item-plug__content--text">
+                      <h3 class="subtitle item-plug__subtitle">Здесь пока пусто</h3>
+                      <p class="descr item-plug__descr">
+                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                      </p>
+                      <a href="#gallery" class="item-plug__link states-link">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="catalog-accordion__item catalog-accordion__item--plug item-plug item-content">
+                  <h3 class="subtitle catalog-accordion__item--subtitle accordion-subtitle">
+                    <span class="accordion-subtitle__text">С 1600 по 1699 гг.</span>
+                    <span class="accordion-subtitle__image"></span>
+                  </h3>
+                  <div class="item-plug__content">
+                    <picture>
+                      <source media="(max-width: 576px)" srcset="img/adaptive/catalog/accordion-plug-item-320.jpg">
+                      <source media="(max-width: 768px)" srcset="img/adaptive/catalog/accordion-plug-item-768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/catalog/accordion-plug-item-1024.jpg">
+                      <img class="item-plug__image" src="img/catalog/accordion-plug-item.jpg" alt="Пустое изображение">
+                    </picture>
+                    <div class="item-plug__content--text">
+                      <h3 class="subtitle item-plug__subtitle">Здесь пока пусто</h3>
+                      <p class="descr item-plug__descr">
+                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                      </p>
+                      <a href="#gallery" class="item-plug__link states-link">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="catalog-accordion__item catalog-accordion__item--plug item-plug item-content">
+                  <h3 class="subtitle catalog-accordion__item--subtitle accordion-subtitle">
+                    <span class="accordion-subtitle__text">С 1700 по 1799 гг.</span>
+                    <span class="accordion-subtitle__image"></span>
+                  </h3>
+                  <div class="item-plug__content">
+                    <picture>
+                      <source media="(max-width: 576px)" srcset="img/adaptive/catalog/accordion-plug-item-320.jpg">
+                      <source media="(max-width: 768px)" srcset="img/adaptive/catalog/accordion-plug-item-768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/catalog/accordion-plug-item-1024.jpg">
+                      <img class="item-plug__image" src="img/catalog/accordion-plug-item.jpg" alt="Пустое изображение">
+                    </picture>
+                    <div class="item-plug__content--text">
+                      <h3 class="subtitle item-plug__subtitle">Здесь пока пусто</h3>
+                      <p class="descr item-plug__descr">
+                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                      </p>
+                      <a href="#gallery" class="item-plug__link states-link">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="catalog-accordion__item catalog-accordion__item--plug item-plug item-content">
+                  <h3 class="subtitle catalog-accordion__item--subtitle accordion-subtitle">
+                    <span class="accordion-subtitle__text">С 1800 по 1899 гг.</span>
+                    <span class="accordion-subtitle__image"></span>
+                  </h3>
+                  <div class="item-plug__content">
+                    <picture>
+                      <source media="(max-width: 576px)" srcset="img/adaptive/catalog/accordion-plug-item-320.jpg">
+                      <source media="(max-width: 768px)" srcset="img/adaptive/catalog/accordion-plug-item-768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/catalog/accordion-plug-item-1024.jpg">
+                      <img class="item-plug__image" src="img/catalog/accordion-plug-item.jpg" alt="Пустое изображение">
+                    </picture>
+                    <div class="item-plug__content--text">
+                      <h3 class="subtitle item-plug__subtitle">Здесь пока пусто</h3>
+                      <p class="descr item-plug__descr">
+                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                      </p>
+                      <a href="#gallery" class="item-plug__link states-link">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="catalog-accordion__item catalog-accordion__item--plug item-plug item-content">
+                  <h3 class="subtitle catalog-accordion__item--subtitle accordion-subtitle">
+                    <span class="accordion-subtitle__text">С 1900 по 1999 гг.</span>
+                    <span class="accordion-subtitle__image"></span>
+                  </h3>
+                  <div class="item-plug__content">
+                    <picture>
+                      <source media="(max-width: 576px)" srcset="img/adaptive/catalog/accordion-plug-item-320.jpg">
+                      <source media="(max-width: 768px)" srcset="img/adaptive/catalog/accordion-plug-item-768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/catalog/accordion-plug-item-1024.jpg">
+                      <img class="item-plug__image" src="img/catalog/accordion-plug-item.jpg" alt="Пустое изображение">
+                    </picture>
+                    <div class="item-plug__content--text">
+                      <h3 class="subtitle item-plug__subtitle">Здесь пока пусто</h3>
+                      <p class="descr item-plug__descr">
+                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                      </p>
+                      <a href="#gallery" class="item-plug__link states-link">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="catalog-accordion__item catalog-accordion__item--plug item-plug item-content">
+                  <h3 class="subtitle catalog-accordion__item--subtitle accordion-subtitle">
+                    <span class="accordion-subtitle__text">С 2000 г.</span>
+                    <span class="accordion-subtitle__image"></span>
+                  </h3>
+                  <div class="item-plug__content">
+                    <picture>
+                      <source media="(max-width: 576px)" srcset="img/adaptive/catalog/accordion-plug-item-320.jpg">
+                      <source media="(max-width: 768px)" srcset="img/adaptive/catalog/accordion-plug-item-768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/catalog/accordion-plug-item-1024.jpg">
+                      <img class="item-plug__image" src="img/catalog/accordion-plug-item.jpg" alt="Пустое изображение">
+                    </picture>
+                    <div class="item-plug__content--text">
+                      <h3 class="subtitle item-plug__subtitle">Здесь пока пусто</h3>
+                      <p class="descr item-plug__descr">
+                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                      </p>
+                      <a href="#gallery" class="item-plug__link states-link">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- блок заглушка -->
+        <div class="catalog-main" data-target="plug-active">
+          <div class="catalog-content__plug">
+            <div class="catalog-content__plug--left">
+              <picture>
+                <img src="img/catalog/left-plug.jpg" alt="Изображение художника" class="catalog-content__left--image">
+              </picture>
+              <h3 class="subtitle catalog-content__left--title">
+                Что мы о нём знаем?
+              </h3>
+              <p class="descr catalog-content__left--descr">
+                Пока ничего...Зато мы точно знаем, что в галерее есть на что посмотреть!
+              </p>
+              <a href="#gallery" class="item-plug__link states-link">В галерею</a>
+            </div>
+            <div class="catalog-content__right catalog-accordion">
+              <ul class="catalog-accordion__list accordion-plug">
+                <li class="catalog-accordion__item catalog-accordion__item--plug item-plug item-content">
+                  <h3 class="subtitle catalog-accordion__item--subtitle">
+                    <span class="accordion-subtitle__text">С 1400 по 1499 гг.</span>
+                    <span class="accordion-subtitle__image"></span>
+                  </h3>
+                  <div class="item-plug__content plug-padding">
+                    <picture>
+                      <source media="(max-width: 576px)" srcset="img/adaptive/catalog/accordion-plug-item-320.jpg">
+                      <source media="(max-width: 768px)" srcset="img/adaptive/catalog/accordion-plug-item-768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/catalog/accordion-plug-item-1024.jpg">
+                      <img class="item-plug__image" src="img/catalog/accordion-plug-item.jpg" alt="Пустое изображение">
+                    </picture>
+                    <div class="item-plug__content--text">
+                      <h3 class="subtitle item-plug__subtitle">Здесь пока пусто</h3>
+                      <p class="descr item-plug__descr">
+                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                      </p>
+                      <a href="#gallery" class="item-plug__link states-link">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="catalog-accordion__item catalog-accordion__item--plug item-plug item-content">
+                  <h3 class="subtitle catalog-accordion__item--subtitle">
+                    <span class="accordion-subtitle__text">С 1500 по 1599 гг.</span>
+                    <span class="accordion-subtitle__image"></span>
+                  </h3>
+                  <div class="item-plug__content plug-padding">
+                    <picture>
+                      <source media="(max-width: 576px)" srcset="img/adaptive/catalog/accordion-plug-item-320.jpg">
+                      <source media="(max-width: 768px)" srcset="img/adaptive/catalog/accordion-plug-item-768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/catalog/accordion-plug-item-1024.jpg">
+                      <img class="item-plug__image" src="img/catalog/accordion-plug-item.jpg" alt="Пустое изображение">
+                    </picture>
+                    <div class="item-plug__content--text">
+                      <h3 class="subtitle item-plug__subtitle">Здесь пока пусто</h3>
+                      <p class="descr item-plug__descr">
+                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                      </p>
+                      <a href="#gallery" class="item-plug__link states-link">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="catalog-accordion__item catalog-accordion__item--plug item-plug item-content">
+                  <h3 class="subtitle catalog-accordion__item--subtitle">
+                    <span class="accordion-subtitle__text">С 1600 по 1699 гг.</span>
+                    <span class="accordion-subtitle__image"></span>
+                  </h3>
+                  <div class="item-plug__content plug-padding">
+                    <picture>
+                      <source media="(max-width: 576px)" srcset="img/adaptive/catalog/accordion-plug-item-320.jpg">
+                      <source media="(max-width: 768px)" srcset="img/adaptive/catalog/accordion-plug-item-768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/catalog/accordion-plug-item-1024.jpg">
+                      <img class="item-plug__image" src="img/catalog/accordion-plug-item.jpg" alt="Пустое изображение">
+                    </picture>
+                    <div class="item-plug__content--text">
+                      <h3 class="subtitle item-plug__subtitle">Здесь пока пусто</h3>
+                      <p class="descr item-plug__descr">
+                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                      </p>
+                      <a href="#gallery" class="item-plug__link states-link">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="catalog-accordion__item catalog-accordion__item--plug item-plug item-content">
+                  <h3 class="subtitle catalog-accordion__item--subtitle">
+                    <span class="accordion-subtitle__text">С 1700 по 1799 гг.</span>
+                    <span class="accordion-subtitle__image"></span>
+                  </h3>
+                  <div class="item-plug__content plug-padding">
+                    <picture>
+                      <source media="(max-width: 576px)" srcset="img/adaptive/catalog/accordion-plug-item-320.jpg">
+                      <source media="(max-width: 768px)" srcset="img/adaptive/catalog/accordion-plug-item-768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/catalog/accordion-plug-item-1024.jpg">
+                      <img class="item-plug__image" src="img/catalog/accordion-plug-item.jpg" alt="Пустое изображение">
+                    </picture>
+                    <div class="item-plug__content--text">
+                      <h3 class="subtitle item-plug__subtitle">Здесь пока пусто</h3>
+                      <p class="descr item-plug__descr">
+                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                      </p>
+                      <a href="#gallery" class="item-plug__link states-link">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="catalog-accordion__item catalog-accordion__item--plug item-plug item-content">
+                  <h3 class="subtitle catalog-accordion__item--subtitle">
+                    <span class="accordion-subtitle__text">С 1800 по 1899 гг.</span>
+                    <span class="accordion-subtitle__image"></span>
+                  </h3>
+                  <div class="item-plug__content plug-padding">
+                    <picture>
+                      <source media="(max-width: 576px)" srcset="img/adaptive/catalog/accordion-plug-item-320.jpg">
+                      <source media="(max-width: 768px)" srcset="img/adaptive/catalog/accordion-plug-item-768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/catalog/accordion-plug-item-1024.jpg">
+                      <img class="item-plug__image" src="img/catalog/accordion-plug-item.jpg" alt="Пустое изображение">
+                    </picture>
+                    <div class="item-plug__content--text">
+                      <h3 class="subtitle item-plug__subtitle">Здесь пока пусто</h3>
+                      <p class="descr item-plug__descr">
+                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                      </p>
+                      <a href="#gallery" class="item-plug__link states-link">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="catalog-accordion__item catalog-accordion__item--plug item-plug item-content">
+                  <h3 class="subtitle catalog-accordion__item--subtitle">
+                    <span class="accordion-subtitle__text">С 1900 по 1999 гг.</span>
+                    <span class="accordion-subtitle__image"></span>
+                  </h3>
+                  <div class="item-plug__content plug-padding">
+                    <picture>
+                      <source media="(max-width: 576px)" srcset="img/adaptive/catalog/accordion-plug-item-320.jpg">
+                      <source media="(max-width: 768px)" srcset="img/adaptive/catalog/accordion-plug-item-768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/catalog/accordion-plug-item-1024.jpg">
+                      <img class="item-plug__image" src="img/catalog/accordion-plug-item.jpg" alt="Пустое изображение">
+                    </picture>
+                    <div class="item-plug__content--text">
+                      <h3 class="subtitle item-plug__subtitle">Здесь пока пусто</h3>
+                      <p class="descr item-plug__descr">
+                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                      </p>
+                      <a href="#gallery" class="item-plug__link states-link">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="catalog-accordion__item catalog-accordion__item--plug item-plug item-content">
+                  <h3 class="subtitle catalog-accordion__item--subtitle">
+                    <span class="accordion-subtitle__text">С 2000 г.</span>
+                    <span class="accordion-subtitle__image"></span>
+                  </h3>
+                  <div class="item-plug__content plug-padding">
+                    <picture>
+                      <source media="(max-width: 576px)" srcset="img/adaptive/catalog/accordion-plug-item-320.jpg">
+                      <source media="(max-width: 768px)" srcset="img/adaptive/catalog/accordion-plug-item-768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/adaptive/catalog/accordion-plug-item-1024.jpg">
+                      <img class="item-plug__image" src="img/catalog/accordion-plug-item.jpg" alt="Пустое изображение">
+                    </picture>
+                    <div class="item-plug__content--text">
+                      <h3 class="subtitle item-plug__subtitle">Здесь пока пусто</h3>
+                      <p class="descr item-plug__descr">
+                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                      </p>
+                      <a href="#gallery" class="item-plug__link states-link">В галерею</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="events section-margin">
+      <div class="container events__container">
+        <h2 class="title events__title">
+          События
+        </h2>
+        <div class="swiper events-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="events-card">
+                <div class="events-card__top">
+                  <picture>
+                    <source media="(max-width: 500px)" srcset="img/adaptive/events/card1-1024.jpg">
+                    <source media="(max-width: 768px)" srcset="img/adaptive/events/card1-768.jpg">
+                    <source media="(max-width: 1024px)" srcset="img/adaptive/events/card1-1024.jpg">
+                    <img src="img/events/card1.jpg" alt="" aria-hidden="true" class="events-card__top--image">
+                  </picture>
+                </div>
+                <div class="events-card__bot">
+                  <div class="events-card__bot--main">
+                    <div class="events-card__bot--location">
+                      <div class="events-card__bot--place">
+                        Музей им. Щусева
+                      </div>
+                      <div class="events-card__bot--time">
+                        с 20 марта по 30 апреля
+                      </div>
+                    </div>
+                    <div class="events-card__bot--info">
+                      <h3 class="subtitle events-card__bot--title">
+                        Книжная гравюра в живом восприятии
+                      </h3>
+                      <p class="descr events-card__bot--descr">
+                        Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
+                      </p>
+                      <div class="events-card__bot--button">
+                        <button class="events-card__bot--btn btn-reset">
+                          Подробнее
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="events-card">
+                <div class="events-card__top">
+                  <picture>
+                    <source media="(max-width: 500px)" srcset="img/adaptive/events/card2-1024.jpg">
+                    <source media="(max-width: 768px)" srcset="img/adaptive/events/card2-768.jpg">
+                    <source media="(max-width: 1024px)" srcset="img/adaptive/events/card2-1024.jpg">
+                    <img src="img/events/card2.jpg" alt="" aria-hidden="true" class="events-card__top--image">
+                  </picture>
+                </div>
+                <div class="events-card__bot">
+                  <div class="events-card__bot--main">
+                    <div class="events-card__bot--location">
+                      <div class="events-card__bot--place">
+                        ММОМА
+                      </div>
+                      <div class="events-card__bot--time">
+                        24 марта 19:00
+                      </div>
+                    </div>
+                    <div class="events-card__bot--info">
+                      <h3 class="subtitle events-card__bot--title">
+                        «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
+                      </h3>
+                      <p class="descr events-card__bot--descr">
+                        Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
+                      </p>
+                      <div class="events-card__bot--button">
+                        <button class="events-card__bot--btn btn-reset">
+                          Подробнее
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="events-card">
+                <div class="events-card__top">
+                  <picture>
+                    <source media="(max-width: 500px)" srcset="img/adaptive/events/card3-1024.jpg">
+                    <source media="(max-width: 768px)" srcset="img/adaptive/events/card3-768.jpg">
+                    <source media="(max-width: 1024px)" srcset="img/adaptive/events/card3-1024.jpg">
+                    <img src="img/events/card3.jpg" alt="" aria-hidden="true" class="events-card__top--image">
+                  </picture>
+                </div>
+                <div class="events-card__bot">
+                  <div class="events-card__bot--main">
+                    <div class="events-card__bot--location">
+                      <div class="events-card__bot--place">
+                        Еврейский музей
+                      </div>
+                      <div class="events-card__bot--time">
+                        с 31 марта по 21 апреля
+                      </div>
+                    </div>
+                    <div class="events-card__bot--info">
+                      <h3 class="subtitle events-card__bot--title">
+                        Выставка «Формация 2020»
+                      </h3>
+                      <p class="descr events-card__bot--descr">
+                        Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.
+                      </p>
+                      <div class="events-card__bot--button">
+                        <button class="events-card__bot--btn btn-reset">
+                          Подробнее
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="events-card">
+                <div class="events-card__top">
+                  <picture>
+                    <source media="(max-width: 500px)" srcset="img/adaptive/events/card4-1024.jpg">
+                    <source media="(max-width: 768px)" srcset="img/adaptive/events/card4-768.jpg">
+                    <source media="(max-width: 1024px)" srcset="img/adaptive/events/card4-1024.jpg">
+                    <img src="img/events/card4.jpg" alt="" aria-hidden="true" class="events-card__top--image">
+                  </picture>
+                </div>
+                <div class="events-card__bot">
+                  <div class="events-card__bot--main">
+                    <div class="events-card__bot--location">
+                      <div class="events-card__bot--place">
+                        Третьяковка на Крымском валу
+                      </div>
+                      <div class="events-card__bot--time">
+                        с 30 марта по 30 апреля
+                      </div>
+                    </div>
+                    <div class="events-card__bot--info">
+                      <h3 class="subtitle events-card__bot--title">
+                        XXIV Международная биеннале молодого искусства
+                      </h3>
+                      <p class="descr events-card__bot--descr">
+                        Внезапно, реплицированные с зарубежных источников, современные исследования.
+                      </p>
+                      <div class="events-card__bot--button">
+                        <button class="events-card__bot--btn btn-reset">
+                          Подробнее
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="events-card">
+                <div class="events-card__top">
+                  <picture>
+                    <source media="(max-width: 500px)" srcset="img/adaptive/events/card1-1024.jpg">
+                    <source media="(max-width: 768px)" srcset="img/adaptive/events/card5-768.jpg">
+                    <source media="(max-width: 1024px)" srcset="img/adaptive/events/card5-1024.jpg">
+                    <img src="img/events/card5.jpg" alt="" aria-hidden="true" class="events-card__top--image">
+                  </picture>
+                </div>
+                <div class="events-card__bot">
+                  <div class="events-card__bot--main">
+                    <div class="events-card__bot--location">
+                      <div class="events-card__bot--place">
+                        ММАМ
+                      </div>
+                      <div class="events-card__bot--time">
+                        с 8 апреля по 20 мая
+                      </div>
+                    </div>
+                    <div class="events-card__bot--info">
+                      <h3 class="subtitle events-card__bot--title">
+                        Джон Винзор. Фотографии из серии «Метафора серебра»
+                      </h3>
+                      <p class="descr events-card__bot--descr">
+                        Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
+                      </p>
+                      <div class="events-card__bot--button">
+                        <button class="events-card__bot--btn btn-reset">
+                          Подробнее
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="swiper-button-prev events-prev"></div>
+          <div class="swiper-button-next events-next"></div>
+
+        </div>
+        <!-- <div class="swiper-pagination events-swiper__pagination"></div> -->
+      </div>
+    </section>
+
+    <section class="public">
+      <div class="container public__container">
+        <div class="public__left">
+          <h2 class="title public__title">
+            Издания
+          </h2>
+          <form action="!#" class="public__form--categories form-categories">
+            <h4 class="form-categories__title public__form--title public-subtitle">
+              Категории
+            </h4>
+            <ul class="form-categories__list">
+              <li class="form-categories__item">
+                <label class="form-categories__label" tabindex="0">
+                  <input type="checkbox" class="form-categories__input">
+                  <span class="form-categories__mark"></span>
+                  Бестселлеры
+                </label>
+              </li>
+              <li class="form-categories__item">
+                <label class="form-categories__label" tabindex="0">
+                  <input type="checkbox" class="form-categories__input">
+                  <span class="form-categories__mark"></span>
+                  Искусство
+                </label>
+              </li>
+              <li class="form-categories__item">
+                <label class="form-categories__label" tabindex="0">
+                  <input type="checkbox" class="form-categories__input">
+                  <span class="form-categories__mark"></span>
+                  Архитектура
+                </label>
+              </li>
+              <li class="form-categories__item">
+                <label class="form-categories__label" tabindex="0">
+                  <input type="checkbox" class="form-categories__input">
+                  <span class="form-categories__mark"></span>
+                  Дизайн
+                </label>
+              </li>
+              <li class="form-categories__item">
+                <label class="form-categories__label" tabindex="0">
+                  <input type="checkbox" class="form-categories__input">
+                  <span class="form-categories__mark"></span>
+                  Мода
+                </label>
+              </li>
+              <li class="form-categories__item">
+                <label class="form-categories__label" tabindex="0">
+                  <input type="checkbox" class="form-categories__input">
+                  <span class="form-categories__mark"></span>
+                  Детям
+                </label>
+              </li>
+              <li class="form-categories__item">
+                <label class="form-categories__label" tabindex="0">
+                  <input type="checkbox" class="form-categories__input">
+                  <span class="form-categories__mark"></span>
+                  Художественная литература
+                </label>
+              </li>
+              <li class="form-categories__item">
+                <label class="form-categories__label" tabindex="0">
+                  <input type="checkbox" class="form-categories__input">
+                  <span class="form-categories__mark"></span>
+                  Публицистика
+                </label>
+              </li>
+              <li class="form-categories__item">
+                <label class="form-categories__label" tabindex="0">
+                  <input type="checkbox" class="form-categories__input">
+                  <span class="form-categories__mark"></span>
+                  Путеводители
+                </label>
+              </li>
+              <li class="form-categories__item">
+                <label class="form-categories__label" tabindex="0">
+                  <input type="checkbox" class="form-categories__input">
+                  <span class="form-categories__mark"></span>
+                  Философия
+                </label>
+              </li>
+              <li class="form-categories__item">
+                <label class="form-categories__label" tabindex="0">
+                  <input type="checkbox" class="form-categories__input">
+                  <span class="form-categories__mark"></span>
+                  Учебная литература
+                </label>
+              </li>
+              <li class="form-categories__item">
+                <label class="form-categories__label" tabindex="0">
+                  <input type="checkbox" class="form-categories__input">
+                  <span class="form-categories__mark"></span>
+                  Журналы и газеты
+                </label>
+              </li>
+            </ul>
+          </form>
+          <form action="!#" class="public__form--range form-range">
+            <h4 class="form-range__title public__form--title public-subtitle">
+              Цена
+            </h4>
+            <div class="form-range__content">
+              <label class="form-range__label">
+                <span class="form-range__text">От</span>
+                <input type="number" min="50" placeholder="50" class="form-range__input">
+              </label>
+              <label class="form-range__label">
+                <span class="form-range__text">до</span>
+                <input type="number" min="50" max="25000" placeholder="25000" class="form-range__input">
+                <span class="form-range__text">руб.</span>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="public__right">
+          <div class="swiper public__swiper">
+            <div class="public-navigation__btns">
+              <button class="btn-reset public-navigation__btn public-prev"></button>
+              <div class="public-pagination"></div>
+              <button class="btn-reset public-navigation__btn public-next"></button>
+            </div>
+            <div class="swiper-wrapper public__swiper--wrapper">
+              <div class="swiper-slide public-slide">
+                <picture>
+                  <source media="(max-width: 1200px)" srcset="img/adaptive/publications/1-1024.jpg">
+                  <img src="img/publications/1.jpg" alt="Искусство цвета" class="public-slide__image">
+                </picture>
+                <h4 class="public-slide__subtitle public-subtitle">
+                  <span>Искусство цвета</span>
+                  <span class="public-slide__cost">620 руб</span>
+                </h4>
+                <div class="public-slide__name">
+                  Иттен, Иоханнес
+                </div>
+                <button class="public-slide__btn btn-reset">
+                  Заказать
+                </button>
+              </div>
+              <div class="swiper-slide public-slide">
+                <picture>
+                  <source media="(max-width: 1200px)" srcset="img/adaptive/publications/2-1024.jpg">
+                  <img src="img/publications/2.jpg" alt="Типографика" class="public-slide__image">
+                </picture>
+                <h4 class="public-slide__subtitle public-subtitle">
+                  <span>Типографика</span>
+                  <span class="public-slide__cost">2450 руб</span>
+                </h4>
+                <div class="public-slide__name">
+                  Рудер, Эмиль
+                </div>
+                <button class="public-slide__btn btn-reset">
+                  Заказать
+                </button>
+              </div>
+              <div class="swiper-slide public-slide">
+                <picture>
+                  <source media="(max-width: 1200px)" srcset="img/adaptive/publications/3-1024.jpg">
+                  <img src="img/publications/3.jpg" alt="Книга про буквы" class="public-slide__image">
+                </picture>
+                <h4 class="public-slide__subtitle public-subtitle">
+                  <span>Книга про буквы</span>
+                  <span class="public-slide__cost">2200 руб</span>
+                </h4>
+                <div class="public-slide__name">
+                  Гордон, Юрий
+                </div>
+                <button class="public-slide__btn btn-reset">
+                  Заказать
+                </button>
+              </div>
+              <div class="swiper-slide public-slide">
+                <picture>
+                  <source media="(max-width: 1200px)" srcset="img/adaptive/publications/4-1024.jpg">
+                  <img src="img/publications/4.jpg" alt="Николай Ильин" class="public-slide__image">
+                </picture>
+                <h4 class="public-slide__subtitle public-subtitle">
+                  <span>Николай Ильин</span>
+                  <span class="public-slide__cost">1100 руб</span>
+                </h4>
+                <div class="public-slide__name">
+                  Кричевский, Владимир
+                </div>
+                <button class="public-slide__btn btn-reset">
+                  Заказать
+                </button>
+              </div>
+              <div class="swiper-slide public-slide">
+                <picture>
+                  <source media="(max-width: 1200px)" srcset="img/adaptive/publications/5-1024.jpg">
+                  <img src="img/publications/5.jpg" alt="Модульные сетки в граф..." class="public-slide__image">
+                </picture>
+                <h4 class="public-slide__subtitle public-subtitle">
+                  <span>Модульные сетки в граф...</span>
+                  <span class="public-slide__cost">1450 руб</span>
+                </h4>
+                <div class="public-slide__name">
+                  Мюллер-Брокманн, Йозеф
+                </div>
+                <button class="public-slide__btn btn-reset">
+                  Заказать
+                </button>
+              </div>
+              <div class="swiper-slide public-slide">
+                <picture>
+                  <source media="(max-width: 1200px)" srcset="img/adaptive/publications/6-1024.jpg">
+                  <img src="img/publications/6.jpg" alt="Эволюция графический ст..." class="public-slide__image">
+                </picture>
+                <h4 class="public-slide__subtitle public-subtitle">
+                  <span>Эволюция графический ст...</span>
+                  <span class="public-slide__cost">3200 руб</span>
+                </h4>
+                <div class="public-slide__name">
+                  Хеллер, Чваст
+                </div>
+                <button class="public-slide__btn btn-reset">
+                  Заказать
+                </button>
+              </div>
+              <div class="swiper-slide public-slide">
+                <picture>
+                  <source media="(max-width: 1200px)" srcset="img/adaptive/publications/7-1024.jpg">
+                  <img src="img/publications/7.jpg" alt="Искусство и визуальное в..." class="public-slide__image">
+                </picture>
+                <h4 class="public-slide__subtitle public-subtitle">
+                  <span>Искусство и визуальное в...</span>
+                  <span class="public-slide__cost">2200 руб</span>
+                </h4>
+                <div class="public-slide__name">
+                  Арнехейм, Рудольф
+                </div>
+                <button class="public-slide__btn btn-reset">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
 
