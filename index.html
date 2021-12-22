@@ -23,6 +23,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body>
@@ -82,7 +83,7 @@
           </button>
         </nav>
         <button class="header-login__button btn-reset focus">
-          <svg class="header-login__image" width="13" height="13" viewиox="0 0 13 13" fill="none"
+          <svg class="header-login__image" width="13" height="13" viewbox="0 0 13 13" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
@@ -697,8 +698,8 @@
                         data-path="plugArt">Брамантино</button>
                     </li>
                     <li class="item-content__element">
-                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
-                        data-path="plugArt">Бреа, Людовико</button>
+                      <button class="item-content__btn btn-reset catalog-accordion__btn--tabs" data-path="plugArt">Бреа,
+                        Людовико</button>
                     </li>
                     <li class="item-content__element">
                       <button class="item-content__btn btn-reset catalog-accordion__btn--tabs"
@@ -1073,6 +1074,10 @@
         <h2 class="title events__title">
           События
         </h2>
+        <div class="events-swiper__btns">
+          <div id="eventsPrev" class="events-prev events-swiper__btn"></div>
+          <div id="eventsNext" class="events-next events-swiper__btn"></div>
+        </div>
         <div class="swiper events-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -1100,7 +1105,8 @@
                         Книжная гравюра в живом восприятии
                       </h3>
                       <p class="descr events-card__bot--descr">
-                        Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
+                        Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии,
+                        которую продолжили его брат Давид и&nbsp;сын Ридольфо.
                       </p>
                       <div class="events-card__bot--button">
                         <button class="events-card__bot--btn btn-reset">
@@ -1137,7 +1143,8 @@
                         «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
                       </h3>
                       <p class="descr events-card__bot--descr">
-                        Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
+                        Высокий уровень вовлечения представителей целевой аудитории является четким доказательством
+                        простого факта.
                       </p>
                       <div class="events-card__bot--button">
                         <button class="events-card__bot--btn btn-reset">
@@ -1174,7 +1181,8 @@
                         Выставка «Формация 2020»
                       </h3>
                       <p class="descr events-card__bot--descr">
-                        Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.
+                        Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет
+                        важную роль в&nbsp;формировании глубокомысленных рассуждений.
                       </p>
                       <div class="events-card__bot--button">
                         <button class="events-card__bot--btn btn-reset">
@@ -1248,7 +1256,8 @@
                         Джон Винзор. Фотографии из серии «Метафора серебра»
                       </h3>
                       <p class="descr events-card__bot--descr">
-                        Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
+                        Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии,
+                        которую продолжили его брат Давид и&nbsp;сын Ридольфо.
                       </p>
                       <div class="events-card__bot--button">
                         <button class="events-card__bot--btn btn-reset">
@@ -1261,14 +1270,8 @@
               </div>
             </div>
           </div>
-
-
-
-          <div class="swiper-button-prev events-prev"></div>
-          <div class="swiper-button-next events-next"></div>
-
         </div>
-        <!-- <div class="swiper-pagination events-swiper__pagination"></div> -->
+        <div class="events-swiper__pagination"></div>
       </div>
     </section>
 
@@ -1386,7 +1389,7 @@
             </div>
           </form>
         </div>
-        <div class="public__right">
+        <!-- <div class="public__right">
           <div class="swiper public__swiper">
             <div class="public-navigation__btns">
               <button class="btn-reset public-navigation__btn public-prev"></button>
@@ -1396,6 +1399,7 @@
             <div class="swiper-wrapper public__swiper--wrapper">
               <div class="swiper-slide public-slide">
                 <picture>
+                  <source media="(max-width: 480px)" srcset="img/adaptive/publications/1-320.jpg">
                   <source media="(max-width: 1200px)" srcset="img/adaptive/publications/1-1024.jpg">
                   <img src="img/publications/1.jpg" alt="Искусство цвета" class="public-slide__image">
                 </picture>
@@ -1412,6 +1416,7 @@
               </div>
               <div class="swiper-slide public-slide">
                 <picture>
+                  <source media="(max-width: 480px)" srcset="img/adaptive/publications/2-320.jpg">
                   <source media="(max-width: 1200px)" srcset="img/adaptive/publications/2-1024.jpg">
                   <img src="img/publications/2.jpg" alt="Типографика" class="public-slide__image">
                 </picture>
@@ -1428,6 +1433,7 @@
               </div>
               <div class="swiper-slide public-slide">
                 <picture>
+                  <source media="(max-width: 480px)" srcset="img/adaptive/publications/3-320.jpg">
                   <source media="(max-width: 1200px)" srcset="img/adaptive/publications/3-1024.jpg">
                   <img src="img/publications/3.jpg" alt="Книга про буквы" class="public-slide__image">
                 </picture>
@@ -1444,6 +1450,7 @@
               </div>
               <div class="swiper-slide public-slide">
                 <picture>
+                  <source media="(max-width: 480px)" srcset="img/adaptive/publications/4-320.jpg">
                   <source media="(max-width: 1200px)" srcset="img/adaptive/publications/4-1024.jpg">
                   <img src="img/publications/4.jpg" alt="Николай Ильин" class="public-slide__image">
                 </picture>
@@ -1460,6 +1467,7 @@
               </div>
               <div class="swiper-slide public-slide">
                 <picture>
+                  <source media="(max-width: 480px)" srcset="img/adaptive/publications/5-320.jpg">
                   <source media="(max-width: 1200px)" srcset="img/adaptive/publications/5-1024.jpg">
                   <img src="img/publications/5.jpg" alt="Модульные сетки в граф..." class="public-slide__image">
                 </picture>
@@ -1476,6 +1484,7 @@
               </div>
               <div class="swiper-slide public-slide">
                 <picture>
+                  <source media="(max-width: 480px)" srcset="img/adaptive/publications/6-320.jpg">
                   <source media="(max-width: 1200px)" srcset="img/adaptive/publications/6-1024.jpg">
                   <img src="img/publications/6.jpg" alt="Эволюция графический ст..." class="public-slide__image">
                 </picture>
@@ -1492,6 +1501,7 @@
               </div>
               <div class="swiper-slide public-slide">
                 <picture>
+                  <source media="(max-width: 480px)" srcset="img/adaptive/publications/7-320.jpg">
                   <source media="(max-width: 1200px)" srcset="img/adaptive/publications/7-1024.jpg">
                   <img src="img/publications/7.jpg" alt="Искусство и визуальное в..." class="public-slide__image">
                 </picture>
@@ -1508,14 +1518,290 @@
               </div>
             </div>
           </div>
+
+        </div> -->
+        <div class="public__right--320">
+          <ul class="public__right--320-list">
+            <li class="public__right--320-item">
+              <img src="img/adaptive/publications/1-320.jpg" alt="Искусство цвета" class="public__right--320-image">
+              <h4 class="public-slide__subtitle public-subtitle">Искусство цвета</h4>
+              <div class="public-slide__name">Иттен, Иоханнес</div>
+              <span class="public-slide__cost">620 руб</span>
+              <button class="public-slide__btn btn-reset">
+                Заказать
+              </button>
+            </li>
+            <li class="public__right--320-item">
+              <img src="img/adaptive/publications/3-320.jpg" alt="Книга про буквы" class="public__right--320-image">
+              <h4 class="public-slide__subtitle public-subtitle">Книга про буквы</h4>
+              <div class="public-slide__name">Гордон, Юрий</div>
+              <span class="public-slide__cost">220 руб</span>
+              <button class="public-slide__btn btn-reset">
+                Заказать
+              </button>
+            </li>
+            <li class="public__right--320-item">
+              <img src="img/adaptive/publications/5-320.jpg" alt="Модульные системы и графические дизайны"
+                class="public__right--320-image">
+              <h4 class="public-slide__subtitle public-subtitle">Модульные сетки</h4>
+              <div class="public-slide__name">Мюллер-Брокманн...</div>
+              <span class="public-slide__cost">1450 руб</span>
+              <button class="public-slide__btn btn-reset">
+                Заказать
+              </button>
+            </li>
+            <li class="public__right--320-item">
+              <img src="img/adaptive/publications/7-320.jpg" alt="Искусство и визуальное восприятие"
+                class="public__right--320-image">
+              <h4 class="public-slide__subtitle public-subtitle">Искусство и визуа...</h4>
+              <div class="public-slide__name">Анхейм, Рудольф</div>
+              <span class="public-slide__cost">2200 руб</span>
+              <button class="public-slide__btn btn-reset">
+                Заказать
+              </button>
+            </li>
+            <li class="public__right--320-item">
+              <img src="img/adaptive/publications/2-320.jpg" alt="Типографика" class="public__right--320-image">
+              <h4 class="public-slide__subtitle public-subtitle">Типографика</h4>
+              <div class="public-slide__name">Рудер, Эмиль</div>
+              <span class="public-slide__cost">2450 руб</span>
+              <button class="public-slide__btn btn-reset">
+                Заказать
+              </button>
+            </li>
+            <li class="public__right--320-item">
+              <img src="img/adaptive/publications/4-320.jpg" alt="Николай Ильин" class="public__right--320-image">
+              <h4 class="public-slide__subtitle public-subtitle">Николай Ильин</h4>
+              <div class="public-slide__name">Кричевский, Влади...</div>
+              <span class="public-slide__cost">1100 руб</span>
+              <button class="public-slide__btn btn-reset">
+                Заказать
+              </button>
+            </li>
+            <li class="public__right--320-item">
+              <img src="img/adaptive/publications/6-320.jpg" alt="Эволюция графических стилей"
+                class="public__right--320-image">
+              <h4 class="public-slide__subtitle public-subtitle">Эволюция графич...</h4>
+              <div class="public-slide__name">Хеллер, Чваст</div>
+              <span class="public-slide__cost">3200 руб</span>
+              <button class="public-slide__btn btn-reset">
+                Заказать
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
+
+    <section class="projects">
+      <div class="container projects__container">
+        <h2 class="title projects__title">
+          Проекты
+        </h2>
+        <p class="descr projects__descr">
+          Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
+          фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны
+          с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает
+          их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <button
+            id="projects-tooltip1" class="tippy-box projects__tooltip btn-reset">
+            <svg class="projects__tooltip--image" width="2" height="10" viewbox="0 0 2 10" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0.261539 3.4551H1.73846V10H0.261539V3.4551ZM1 1.90259C0.712821 1.90259 0.471795 1.81126 0.276924 1.62861C0.0923081 1.44597 0 1.22273 0 0.958904C0 0.695079 0.0923081 0.471841 0.276924 0.289193C0.471795 0.0963976 0.712821 0 1 0C1.28718 0 1.52308 0.0913239 1.70769 0.273972C1.90256 0.446473 2 0.664636 2 0.928462C2 1.20243 1.90256 1.43582 1.70769 1.62861C1.52308 1.81126 1.28718 1.90259 1 1.90259Z" />
+            </svg>
+          </button> обеспечение нашей
+          деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет
+          сомнений, что действия представителей оппозиции могут быть рассмотрены <button id="projects-tooltip2"
+            class="tippy-box projects__tooltip btn-reset">
+            <svg class="projects__tooltip--image" width="2" height="10" viewbox="0 0 2 10" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0.261539 3.4551H1.73846V10H0.261539V3.4551ZM1 1.90259C0.712821 1.90259 0.471795 1.81126 0.276924 1.62861C0.0923081 1.44597 0 1.22273 0 0.958904C0 0.695079 0.0923081 0.471841 0.276924 0.289193C0.471795 0.0963976 0.712821 0 1 0C1.28718 0 1.52308 0.0913239 1.70769 0.273972C1.90256 0.446473 2 0.664636 2 0.928462C2 1.20243 1.90256 1.43582 1.70769 1.62861C1.52308 1.81126 1.28718 1.90259 1 1.90259Z" />
+            </svg>
+          </button> исключительно в&nbsp;разрезе
+          маркетинговых и&nbsp;финансовых <button id="projects-tooltip3" class="tippy-box projects__tooltip btn-reset">
+            <svg class="projects__tooltip--image" width="2" height="10" viewbox="0 0 2 10" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0.261539 3.4551H1.73846V10H0.261539V3.4551ZM1 1.90259C0.712821 1.90259 0.471795 1.81126 0.276924 1.62861C0.0923081 1.44597 0 1.22273 0 0.958904C0 0.695079 0.0923081 0.471841 0.276924 0.289193C0.471795 0.0963976 0.712821 0 1 0C1.28718 0 1.52308 0.0913239 1.70769 0.273972C1.90256 0.446473 2 0.664636 2 0.928462C2 1.20243 1.90256 1.43582 1.70769 1.62861C1.52308 1.81126 1.28718 1.90259 1 1.90259Z" />
+            </svg>
+          </button> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также
+          представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою
+          очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости.
+          Подробнее: <a href="!#" class="projects__link">blanchard-art.ru/projects</a>
+        </p>
+        <h4 class="subtitle projects__subtitle">
+          Партнеры проектов:
+        </h4>
+        <div class="projects-swiper-main">
+          <div class="swiper projects-swiper">
+            <div class="swiper-wrapper projects-swiper__wrapper">
+              <div class="swiper-slide projects-slide" tabindex="0">
+                <img src="img/projects/2.jpg" alt="2" class="projects-slide__image projects-slide__image1">
+              </div>
+              <div class="swiper-slide projects-slide" tabindex="0">
+                <img src="img/projects/3.jpg" alt="3" class="projects-slide__image projects-slide__image2">
+              </div>
+              <div class="swiper-slide projects-slide" tabindex="0">
+                <img src="img/projects/1.jpg" alt="1" class="projects-slide__image projects-slide__image3">
+              </div>
+              <div class="swiper-slide projects-slide" tabindex="0">
+                <img src="img/projects/4.jpg" alt="4" class="projects-slide__image projects-slide__image4">
+              </div>
+              <div class="swiper-slide projects-slide" tabindex="0">
+                <img src="img/projects/5.jpg" alt="5" class="projects-slide__image projects-slide__image5">
+              </div>
+              <div class="swiper-slide projects-slide" tabindex="0">
+                <img src="img/projects/6.jpg" alt="6" class="projects-slide__image projects-slide__image6">
+              </div>
+              <div class="swiper-slide projects-slide" tabindex="0">
+                <img src="img/projects/7.jpg" alt="7" class="projects-slide__image projects-slide__image7">
+              </div>
+              <div class="swiper-slide projects-slide" tabindex="0">
+                <img src="img/projects/8.jpg" alt="8" class="projects-slide__image projects-slide__image8">
+              </div>
+              <div class="swiper-slide projects-slide" tabindex="0">
+                <img src="img/projects/9.jpg" alt="9" class="projects-slide__image projects-slide__image9">
+              </div>
+            </div>
+          </div>
+          <div class="projects-swiper__btns">
+            <div class="projects-prev"></div>
+            <div class="projects-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts">
+      <div class="container contacts-container">
+        <h2 class="title contacts__title">
+          Контакты
+        </h2>
+        <div class="contacts__top">
+          <div class="contacts__top--place">
+            <h3 class="subtitle contacts__top--place-subtitle">
+              Шоурум №4
+            </h3>
+            <div class="contacts__top--address">
+              Леонтьевский переулок, дом 5/1
+            </div>
+          </div>
+          <form action="!#" id="form-contacts" class="contacts__top--form form-contacts">
+            <label class="form-contacts__label">
+              <input type="text" name="Имя" class="form-contacts__input" id="form-contacts__name" placeholder="Имя*" required>
+            </label>
+            <label class="form-contacts__label">
+              <input type="tel" name="Телефон" class="form-contacts__input" id="form-contacts__tel" placeholder="Телефон*" required>
+            </label>
+            <button class="form-contacts__btn form-contacts__btn--big btn-reset">
+              Заказать обратный звонок
+            </button>
+            <button class="form-contacts__btn form-contacts__btn--320 btn-reset">
+              Заказать
+            </button>
+          </form>
+          <div class="contacts__top--social">
+            <h3 class="subtitle contacts__top--social__subtitle">
+              Связаться в один клик
+            </h3>
+            <ul class="contacts__top--social__list">
+              <li class="contacts__top--social__item">
+                <a href="!#" class="contacts__top--social__link contacts__top--social-messengers--whatsup">
+                  <svg class="contacts__top--social__image" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_113719_25)">
+                    <path d="M20 39.3751C30.7005 39.3751 39.375 30.7006 39.375 20.0001C39.375 9.29961 30.7005 0.625122 20 0.625122C9.29948 0.625122 0.625 9.29961 0.625 20.0001C0.625 30.7006 9.29948 39.3751 20 39.3751Z" fill="#30BF39"/>
+                    <path d="M25.875 21.751C25.625 21.626 24.3125 20.876 24.0625 20.8135C23.8125 20.6885 23.625 20.6885 23.4375 20.9385C23.25 21.1885 22.6875 21.8135 22.5625 21.9385C22.375 22.126 22.25 22.126 22 22.001C21.75 21.876 20.875 21.5635 19.875 20.5635C19.125 19.8135 18.5625 18.9385 18.4375 18.626C18.3125 18.376 18.4375 18.1885 18.5625 18.0635C18.6875 17.9385 18.8125 17.751 19 17.626C19.1875 17.501 19.1875 17.376 19.3125 17.1885C19.4375 17.001 19.375 16.876 19.3125 16.6885C19.25 16.501 18.75 15.1885 18.5625 14.626C18.375 14.0635 18.125 14.1885 18 14.126C17.8125 14.126 17.6875 14.0635 17.5 14.0635C17.25 14.0635 16.9375 14.1885 16.75 14.376C16.5 14.626 15.75 15.251 15.75 16.5635C15.75 17.876 16.625 19.251 16.75 19.376C16.875 19.5635 18.5 22.4385 21.1875 23.626C23.875 24.8135 23.875 24.4385 24.375 24.4385C24.875 24.4385 26 23.8135 26.25 23.251C26.5 22.626 26.5 22.0635 26.4375 22.001C26.3125 22.001 26.125 21.9385 25.875 21.751ZM20.875 28.1885C19.125 28.1885 17.5 27.6885 16.0625 26.751L12.6875 27.8135L13.8125 24.5635C12.75 23.0635 12.125 21.251 12.125 19.376C12.125 14.501 16.0625 10.5635 20.9375 10.5635C25.8125 10.5635 29.6875 14.501 29.6875 19.376C29.6875 24.251 25.75 28.1885 20.875 28.1885ZM20.875 8.81348C15.0625 8.81348 10.3125 13.5635 10.3125 19.376C10.3125 21.3135 10.8125 23.1885 11.8125 24.8135L9.875 30.501L15.75 28.626C17.3125 29.501 19.0625 29.9385 20.875 29.9385C26.6875 29.9385 31.4375 25.1885 31.4375 19.376C31.4375 13.5635 26.75 8.81348 20.875 8.81348Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <clippath id="clip0_113719_25">
+                    <rect width="40" height="40" fill="white" transform="translate(0 0.00012207)"/>
+                    </clippath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+              <li class="contacts__top--social__item">
+                <a href="!#" class="contacts__top--social__link contacts__top--social-messengers--telegramm">
+                  <svg class="contacts__top--social__image" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_113719_28)">
+                    <path d="M20 40.0001C31.0457 40.0001 40 31.0458 40 20.0001C40 8.95443 31.0457 0.00012207 20 0.00012207C8.95431 0.00012207 0 8.95443 0 20.0001C0 31.0458 8.95431 40.0001 20 40.0001Z" fill="url(#paint0_linear_113719_28)"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05321 19.789L20.7168 14.765C26.2711 12.4548 27.4251 12.0535 28.1774 12.0403C28.3429 12.0374 28.7128 12.0784 28.9524 12.2728C29.1548 12.437 29.2104 12.6588 29.2371 12.8144C29.2637 12.97 29.2969 13.3247 29.2705 13.6018C28.9695 16.7642 27.6671 24.4387 27.0046 27.9807C26.7242 29.4795 26.1726 29.9821 25.6378 30.0312C24.4763 30.1381 23.5944 29.2636 22.4694 28.5263L18.0061 25.5281C16.0314 24.2269 17.3115 23.5117 18.4369 22.3429C18.7314 22.0369 23.8487 17.3824 23.9477 16.9601C23.9597 16.9073 23.9716 16.7105 23.8547 16.6065C23.7377 16.5025 23.565 16.5385 23.4405 16.5664C23.264 16.6065 20.452 18.4651 15.0044 22.1424C14.2062 22.6905 13.4832 22.9576 12.8355 22.9436C12.1214 22.9282 10.7478 22.5399 9.72661 22.2079C8.47408 21.8008 7.4786 21.5855 7.56532 20.8941C7.61044 20.5339 8.1064 20.1657 9.05317 19.7891L9.05321 19.789Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <lineargradient id="paint0_linear_113719_28" x1="20" y1="0.00012207" x2="20" y2="39.7034" gradientunits="userSpaceOnUse">
+                    <stop stop-color="#2AABEE"/>
+                    <stop offset="1" stop-color="#229ED9"/>
+                    </lineargradient>
+                    <clippath id="clip0_113719_28">
+                    <rect width="40" height="40" fill="white" transform="translate(0 0.00012207)"/>
+                    </clippath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="map" style="width: 100vw; height: 700px"></div>
+    </section>
   </main>
+  <footer class="footer">
+    <div class="container footer__container">
+      <ul class="footer__list">
+        <li class="footer__item footer-item__logo">
+          <picture>
+            <source media="(max-width: 576px)" srcset="img/footer/footer-logo-302.png">
+            <img src="img/footer/footer-logo.png" alt="Логотип компании">
+          </picture>
+        </li>
+        <li class="footer__item footer-social">
+          <ul class="footer-social__list">
+            <li class="footer-social__item">
+              <a href="!#" class="footer-social__link">
+                <svg class="footer-social__image footer-social__icon" width="45" height="45" viewbox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.5 0C10.074 0 0 10.0736 0 22.5C0 34.9264 10.074 45 22.5 45C34.926 45 45 34.9264 45 22.5C45 10.0736 34.926 0 22.5 0ZM33.9132 24.9335C34.9619 25.9577 36.0714 26.9217 37.0128 28.0519C37.4299 28.5519 37.823 29.0688 38.1222 29.6503C38.5495 30.4794 38.1637 31.3886 37.4216 31.4379L32.812 31.4369C31.6215 31.5354 30.6741 31.0553 29.8754 30.2414C29.2378 29.5927 28.6462 28.8999 28.0321 28.2292C27.7812 27.9539 27.517 27.6947 27.2021 27.4907C26.5737 27.0819 26.0277 27.2072 25.6677 27.8636C25.3008 28.5316 25.217 29.2719 25.182 30.0153C25.1319 31.1022 24.8041 31.3863 23.7135 31.4374C21.3832 31.5465 19.1721 31.1929 17.117 30.0181C15.3041 28.9818 13.901 27.5193 12.6783 25.8634C10.2973 22.6353 8.47381 19.0924 6.8354 15.4478C6.46665 14.627 6.73642 14.1878 7.64194 14.1707C9.14639 14.1417 10.6508 14.1454 12.1553 14.1694C12.7676 14.179 13.1727 14.5294 13.4079 15.1071C14.2209 17.1074 15.2176 19.0105 16.4665 20.7755C16.7994 21.2455 17.1391 21.7142 17.623 22.0461C18.157 22.4125 18.5639 22.2915 18.8158 21.6953C18.9769 21.3164 19.0464 20.9113 19.0814 20.5053C19.2011 19.1145 19.2153 17.7242 19.0082 16.339C18.8793 15.4722 18.3918 14.9124 17.5277 14.7485C17.0876 14.6652 17.152 14.5022 17.3661 14.2508C17.7376 13.8163 18.0856 13.5474 18.7812 13.5474L23.9893 13.5465C24.8101 13.7076 24.9942 14.0759 25.1056 14.9027L25.1102 20.6903C25.1006 21.0103 25.2709 21.9586 25.8454 22.1681C26.3058 22.32 26.6096 21.9508 26.8849 21.6594C28.1339 20.334 29.0237 18.7697 29.8206 17.1506C30.1723 16.4366 30.4757 15.6978 30.7703 14.9575C30.9895 14.4101 31.3301 14.1408 31.9479 14.15L36.9631 14.156C37.1108 14.156 37.2609 14.1574 37.4073 14.1827C38.2525 14.3273 38.4841 14.6909 38.2226 15.5154C37.811 16.8109 37.0114 17.89 36.2297 18.9718C35.3919 20.1301 34.4983 21.2478 33.6687 22.4111C32.9064 23.4746 32.9667 24.01 33.9132 24.9335Z" fill="#CACACA"/>
+                </svg>
+                <svg class="footer-social__image320 footer-social__icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M25 0C11.1933 0 0 11.1928 0 25C0 38.8072 11.1933 50 25 50C38.8066 50 50 38.8072 50 25C50 11.1928 38.8066 0 25 0ZM37.6813 27.7038C38.8465 28.8419 40.0793 29.913 41.1253 31.1688C41.5887 31.7243 42.0256 32.2987 42.3581 32.9448C42.8327 33.866 42.4041 34.8762 41.5795 34.9309L36.4578 34.9299C35.135 35.0394 34.0824 34.5059 33.1949 33.6015C32.4864 32.8808 31.8292 32.111 31.1468 31.3657C30.868 31.0598 30.5744 30.7719 30.2246 30.5453C29.5263 30.091 28.9197 30.2302 28.5197 30.9596C28.112 31.7018 28.0189 32.5243 27.9801 33.3504C27.9243 34.5581 27.5601 34.8737 26.3483 34.9304C23.7591 35.0517 21.3023 34.6588 19.0189 33.3535C17.0046 32.202 15.4455 30.577 14.087 28.7371C11.4414 25.1504 9.41535 21.2138 7.59488 17.1642C7.18517 16.2522 7.48491 15.7642 8.49105 15.7453C10.1627 15.713 11.8343 15.7171 13.5059 15.7437C14.1862 15.7545 14.6363 16.1437 14.8977 16.7857C15.801 19.0082 16.9084 21.1228 18.2962 23.0839C18.666 23.6061 19.0435 24.1269 19.5811 24.4957C20.1744 24.9028 20.6266 24.7683 20.9064 24.1059C21.0854 23.6849 21.1627 23.2348 21.2015 22.7836C21.3345 21.2384 21.3504 19.6936 21.1202 18.1545C20.977 17.1913 20.4353 16.5693 19.4752 16.3872C18.9862 16.2946 19.0578 16.1136 19.2957 15.8343C19.7084 15.3514 20.0951 15.0527 20.868 15.0527L26.6547 15.0517C27.5668 15.2307 27.7714 15.6399 27.8951 16.5586L27.9003 22.9893C27.8895 23.3448 28.0788 24.3985 28.7171 24.6312C29.2286 24.8 29.5662 24.3898 29.8721 24.066C31.2598 22.5933 32.2486 20.8552 33.134 19.0563C33.5248 18.2629 33.8619 17.4419 34.1893 16.6194C34.4327 16.0113 34.8113 15.712 35.4977 15.7222L41.0701 15.7289C41.2343 15.7289 41.401 15.7304 41.5637 15.7586C42.5028 15.9192 42.7601 16.3233 42.4696 17.2394C42.0123 18.6788 41.1238 19.8777 40.2552 21.0798C39.3243 22.3668 38.3315 23.6087 37.4097 24.9013C36.5627 26.0829 36.6297 26.6777 37.6813 27.7038Z" fill="#CACACA"/>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-social__item">
+              <a href="!#" class="footer-social__link">
+                <svg class="footer-social__image footer-social__icon" width="45" height="45" viewbox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.1172 22.5C18.1172 24.8785 20.0453 26.8066 22.4238 26.8066C24.8024 26.8066 26.7305 24.8785 26.7305 22.5C26.7305 20.1215 24.8024 18.1934 22.4238 18.1934C20.0453 18.1934 18.1172 20.1215 18.1172 22.5Z" fill="#CACACA"/>
+                  <path d="M12.3522 14.8801C12.5592 14.3191 12.8895 13.8113 13.3187 13.3945C13.7355 12.9654 14.2429 12.6351 14.8042 12.4281C15.2595 12.2513 15.9434 12.0408 17.203 11.9835C18.5657 11.9213 18.9742 11.908 22.4239 11.908C25.874 11.908 26.2825 11.921 27.6448 11.9831C28.9045 12.0408 29.5887 12.2513 30.0436 12.4281C30.605 12.6351 31.1127 12.9654 31.5292 13.3945C31.9583 13.8113 32.2886 14.3188 32.496 14.8801C32.6728 15.3354 32.8832 16.0196 32.9406 17.2792C33.0027 18.6415 33.0161 19.0501 33.0161 22.5002C33.0161 25.9499 33.0027 26.3584 32.9406 27.7211C32.8832 28.9807 32.6728 29.6646 32.496 30.1199C32.2886 30.6812 31.9587 31.1886 31.5295 31.6054C31.1127 32.0346 30.6053 32.3648 30.044 32.5719C29.5887 32.749 28.9045 32.9595 27.6448 33.0168C26.2825 33.079 25.8743 33.092 22.4243 33.092C18.9739 33.092 18.5653 33.079 17.2034 33.0168C15.9437 32.9595 15.2595 32.749 14.8042 32.5719C13.6774 32.1372 12.7868 31.2466 12.3522 30.1199C12.1754 29.6646 11.9649 28.9807 11.9073 27.7211C11.8451 26.3584 11.8321 25.9499 11.8321 22.5002C11.8321 19.0501 11.8451 18.6415 11.9073 17.2792C11.9646 16.0196 12.175 15.3354 12.3522 14.8801ZM22.4239 29.1342C26.0882 29.1342 29.0586 26.1641 29.0586 22.4998C29.0586 18.8355 26.0882 15.8654 22.4239 15.8654C18.76 15.8654 15.7896 18.8355 15.7896 22.4998C15.7896 26.1641 18.76 29.1342 22.4239 29.1342ZM15.5273 17.1536C16.3835 17.1536 17.0777 16.4594 17.0777 15.6031C17.0777 14.7469 16.3835 14.0527 15.5273 14.0527C14.671 14.0527 13.9768 14.7469 13.9768 15.6031C13.9771 16.4594 14.671 17.1536 15.5273 17.1536Z" fill="#CACACA"/>
+                  <path d="M22.6204 0C34.9364 0 44.9238 9.98747 44.9238 22.3034C44.9238 34.6194 34.9364 44.6069 22.6204 44.6069C10.3044 44.6069 0.316959 34.6194 0.316959 22.3034C0.316959 9.98747 10.3044 0 22.6204 0ZM9.89059 27.5836C9.95253 28.9469 10.1693 29.8777 10.4858 30.6924C11.1512 32.4127 12.5111 33.7727 14.2314 34.438C15.0458 34.7545 15.9769 34.971 17.3399 35.0332C18.7057 35.0955 19.1419 35.1105 22.6201 35.1105C26.0985 35.1105 26.5345 35.0955 27.9005 35.0332C29.2635 34.971 30.1946 34.7545 31.009 34.438C31.8639 34.1164 32.6378 33.6124 33.2776 32.9607C33.929 32.3212 34.433 31.547 34.7546 30.6924C35.0711 29.878 35.2879 28.9469 35.3498 27.5839C35.4128 26.2178 35.4274 25.7815 35.4274 22.3034C35.4274 18.8253 35.4128 18.389 35.3502 17.0233C35.2883 15.66 35.0718 14.7292 34.7553 13.9145C34.4337 13.0599 33.9293 12.2857 33.2776 11.6462C32.6382 10.9945 31.8639 10.4905 31.0094 10.1689C30.1946 9.85236 29.2638 9.63592 27.9005 9.57364C26.5348 9.51136 26.0985 9.49638 22.6204 9.49638C19.1423 9.49638 18.706 9.51136 17.3403 9.57398C15.9769 9.63592 15.0462 9.85236 14.2314 10.1685C13.3769 10.4901 12.6026 10.9945 11.9628 11.6462C11.3114 12.286 10.8071 13.0599 10.4858 13.9145C10.169 14.7292 9.95253 15.66 9.89025 17.0233C9.82798 18.389 9.81334 18.8253 9.81334 22.3034C9.81334 25.7815 9.82798 26.2178 9.89059 27.5836Z" fill="#CACACA"/>
+                </svg>
+                <svg class="footer-social__image320 footer-social__icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.2148 25C20.2148 27.6428 22.3572 29.7852 25 29.7852C27.6428 29.7852 29.7852 27.6428 29.7852 25C29.7852 22.3572 27.6428 20.2148 25 20.2148C22.3572 20.2148 20.2148 22.3572 20.2148 25Z" fill="#CACACA"/>
+                  <path d="M13.8091 16.5336C14.0392 15.9103 14.4061 15.3461 14.883 14.883C15.3461 14.4061 15.9099 14.0392 16.5336 13.8091C17.0394 13.6127 17.7993 13.3788 19.1989 13.3151C20.713 13.2461 21.1669 13.2312 24.9999 13.2312C28.8333 13.2312 29.2873 13.2457 30.8009 13.3147C32.2006 13.3788 32.9608 13.6127 33.4663 13.8091C34.09 14.0392 34.6542 14.4061 35.1169 14.883C35.5937 15.3461 35.9607 15.9099 36.1911 16.5336C36.3876 17.0394 36.6214 17.7997 36.6851 19.1993C36.7542 20.713 36.769 21.1669 36.769 25.0003C36.769 28.8333 36.7542 29.2873 36.6851 30.8013C36.6214 32.2009 36.3876 32.9608 36.1911 33.4666C35.9607 34.0904 35.5941 34.6542 35.1173 35.1173C34.6542 35.5941 34.0904 35.9611 33.4667 36.1911C32.9608 36.3879 32.2006 36.6218 30.8009 36.6855C29.2873 36.7545 28.8337 36.769 25.0003 36.769C21.1665 36.769 20.7126 36.7545 19.1993 36.6855C17.7997 36.6218 17.0394 36.3879 16.5336 36.1911C15.2816 35.7082 14.2921 34.7186 13.8091 33.4666C13.6127 32.9608 13.3788 32.2009 13.3148 30.8013C13.2457 29.2873 13.2312 28.8333 13.2312 25.0003C13.2312 21.1669 13.2457 20.713 13.3148 19.1993C13.3785 17.7997 13.6123 17.0394 13.8091 16.5336ZM24.9999 32.3714C29.0714 32.3714 32.3718 29.0714 32.3718 24.9999C32.3718 20.9285 29.0714 17.6284 24.9999 17.6284C20.9289 17.6284 17.6284 20.9285 17.6284 24.9999C17.6284 29.0714 20.9289 32.3714 24.9999 32.3714ZM17.337 19.0597C18.2884 19.0597 19.0597 18.2883 19.0597 17.337C19.0597 16.3856 18.2884 15.6142 17.337 15.6142C16.3856 15.6142 15.6143 16.3856 15.6143 17.337C15.6146 18.2883 16.3856 19.0597 17.337 19.0597Z" fill="#CACACA"/>
+                  <path d="M25 0C38.805 0 50 11.195 50 25C50 38.805 38.805 50 25 50C11.195 50 0 38.805 0 25C0 11.195 11.195 0 25 0ZM10.7311 30.9185C10.8006 32.4467 11.0435 33.49 11.3983 34.4032C12.1441 36.3316 13.6684 37.8559 15.5968 38.6017C16.5096 38.9565 17.5533 39.1991 19.0811 39.2689C20.612 39.3387 21.101 39.3555 24.9996 39.3555C28.8986 39.3555 29.3873 39.3387 30.9185 39.2689C32.4463 39.1991 33.49 38.9565 34.4028 38.6017C35.3611 38.2412 36.2286 37.6762 36.9457 36.9457C37.6759 36.2289 38.2408 35.3611 38.6013 34.4032C38.9561 33.4904 39.1991 32.4467 39.2685 30.9189C39.3391 29.3877 39.3555 28.8986 39.3555 25C39.3555 21.1014 39.3391 20.6123 39.2689 19.0815C39.1994 17.5533 38.9568 16.51 38.6021 15.5968C38.2416 14.6389 37.6762 13.7711 36.9457 13.0543C36.2289 12.3238 35.3611 11.7588 34.4032 11.3983C33.49 11.0435 32.4467 10.8009 30.9185 10.7311C29.3877 10.6613 28.8986 10.6445 25 10.6445C21.1014 10.6445 20.6123 10.6613 19.0815 10.7315C17.5533 10.8009 16.51 11.0435 15.5968 11.3979C14.6389 11.7584 13.7711 12.3238 13.0539 13.0543C12.3238 13.7714 11.7584 14.6389 11.3983 15.5968C11.0432 16.51 10.8006 17.5533 10.7307 19.0815C10.6609 20.6123 10.6445 21.1014 10.6445 25C10.6445 28.8986 10.6609 29.3877 10.7311 30.9185Z" fill="#CACACA"/>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-social__item">
+              <a href="!#" class="footer-social__link">
+                <svg class="footer-social__image footer-social__icon" width="45" height="45" viewbox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.5 0C10.125 0 0 10.1431 0 22.6355C0 33.9307 8.23499 43.3057 18.99 45V29.1867H13.275V22.6355H18.99V17.6431C18.99 11.9729 22.3425 8.85542 27.495 8.85542C29.9475 8.85542 32.5125 9.28464 32.5125 9.28464V14.8645H29.6775C26.8875 14.8645 26.01 16.6039 26.01 18.3886V22.6355H32.265L31.2525 29.1867H26.01V45C31.312 44.1593 36.1399 41.4432 39.6223 37.342C43.1047 33.2408 45.012 28.0248 44.9999 22.6355C44.9999 10.1431 34.875 0 22.5 0Z" fill="#CACACA"/>
+                </svg>
+                <svg class="footer-social__image320 footer-social__icon" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M25 0C11.25 0 0 11.2701 0 25.1506C0 37.7008 9.14999 48.1175 21.1 50V32.4297H14.75V25.1506H21.1V19.6034C21.1 13.3032 24.825 9.83936 30.55 9.83936C33.275 9.83936 36.125 10.3163 36.125 10.3163V16.5161H32.975C29.875 16.5161 28.9 18.4488 28.9 20.4317V25.1506H35.85L34.725 32.4297H28.9V50C34.7911 49.0659 40.1555 46.048 44.0248 41.4911C47.8941 36.9342 50.0133 31.1387 49.9999 25.1506C49.9999 11.2701 38.75 0 25 0Z" fill="#CACACA"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </footer>
 
-
-
-
+  <script src="js/inputmask.min.js"></script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
   <script src="js/choices.min.js"></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js"

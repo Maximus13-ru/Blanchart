@@ -329,20 +329,20 @@ const heightStyle = $( "#accordion" ).accordion( "option", "heightStyle" );
 const eventsSwiper = new Swiper(".events-swiper", {
   slidesPerView: 3,
   slidesPerGroup: 1,
-  loop: true,
+  //loop: true,
   grid: {
     rows: 1,
   },
   spaceBetween: 50,
   pagination: {
     el: ".events-swiper__pagination",
-   // type: "bullets",
-   // clickable: true,
+    type: "bullets",
+    clickable: true,
   },
-  navigation: {
-    nextEl: ".events-next",
-    prevEl: ".events-prev"
-  },
+   navigation: {
+     nextEl: ".events-next",
+     prevEl: ".events-prev"
+   },
 
   breakpoints: {
     320: {
@@ -395,6 +395,16 @@ const eventsSwiper = new Swiper(".events-swiper", {
   // }
 });
 
+const eventsPrev = document.getElementById('eventsPrev')
+const eventsNext = document.getElementById('eventsNext')
+
+eventsPrev.addEventListener('click', () => {
+  eventsSwiper.eventsPrev();
+});
+eventsNext.addEventListener('click', () => {
+  eventsSwiper.eventsNext();
+});
+
 // public
 
 const publicSwiper = new Swiper(".public__swiper", {
@@ -403,19 +413,45 @@ const publicSwiper = new Swiper(".public__swiper", {
   grid: {
     rows: 1,
   },
-
   spaceBetween: 50,
-
   pagination: {
      el: ".public-pagination",
      type: "fraction",
      clickable: true,
   },
-
   navigation: {
     nextEl: ".public-next",
     prevEl: ".public-prev"
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 7,
+      spaceBetween: 34,
+      grid: {
+        rows: 4,
+      },
+    },
+    321: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+    },
+
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+
+    },
+
+    1201: {
+      slidesPerView: 3,
+    },
+  },
+
+
 
 });
 
@@ -444,3 +480,143 @@ document.querySelectorAll(".form-categories__label").forEach(el => {
     }
   });
 });
+
+
+//projects
+
+const projectsSwiper = new Swiper(".projects-swiper", {
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  grid: {
+    rows: 1,
+  },
+  spaceBetween: 50,
+  navigation: {
+    nextEl: ".projects-next",
+    prevEl: ".projects-prev"
+  },
+  breakpoints: {
+    1201: {
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+      spaceBetween: 50,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      spaceBetween: 50,
+    },
+    321: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      spaceBetween: 34,
+    },
+    320: {
+      slidesPerView: 1,
+    }
+  }
+});
+
+//projects-tooltips
+
+tippy('#projects-tooltip1', {
+  content: 'Пример современных тенденций - современная методология разработки',
+  maxWidth: 264,
+  theme: 'lilac',
+});
+
+tippy('#projects-tooltip2', {
+  content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
+  maxWidth: 264,
+  theme: 'lilac',
+});
+
+
+tippy('#projects-tooltip3', {
+  content: 'В стремлении повысить качество',
+  maxWidth: 264,
+  theme: 'lilac',
+});
+
+
+//contacts
+//contacts map
+
+ymaps.ready(init);
+function init(){
+    // Создание карты.
+    var myMap = new ymaps.Map("map", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [55.75846806898367,37.60108849999989],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 17
+
+    });
+    myPlacemark = new ymaps.Placemark(myMap.getCenter([55.75846806898367,37.60108849999989]), {
+      hintContent: 'Собственный значок метки',
+      balloonContent: 'Это красивая метка'
+    }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#image',
+      // Своё изображение иконки метки.
+      iconImageHref: 'img/contacts/icon-map.svg',
+      // Размеры метки.
+      iconImageSize: [20, 20],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      //iconImageOffset: [-5, -38]
+    })
+    myMap.geoObjects.add(myPlacemark);
+}
+
+//contacts validate
+
+var selector = document.querySelector("input[type='tel']");
+var im = new Inputmask("+7 (999) 999-99-99");
+
+im.mask(selector);
+
+const contactsFormValidation = new window.JustValidate('#form-contacts');
+
+contactsFormValidation
+  .addField('#form-contacts__name', [
+    {
+      rule: 'required',
+      errorMessage: 'Обязательно для заполнения!',
+    },
+
+    {
+      rule: 'minLength',
+      value: 2,
+      errorMessage: 'Недопустимый формат'
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Недопустимый формат'
+    },
+  ])
+  .addField('#form-contacts__tel', [
+    {
+      rule: 'required',
+      errorMessage: 'Обязательно для заполнения!',
+    },
+    {
+      rule: 'number',
+      errorMessage: 'Недопустимый формат',
+    },
+  ]);
+  // contactsFormValidation.addField('#text', [
+  //   {
+  //     validator: (value) => value[value.length - 1] === '.',
+  //   },
+  // ]);
+
+
+
+
