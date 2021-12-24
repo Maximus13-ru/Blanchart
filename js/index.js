@@ -323,6 +323,13 @@ $( "#accordion" ).accordion({
 
 const heightStyle = $( "#accordion" ).accordion( "option", "heightStyle" );
 
+$("#accordion").accordion({
+  heightStyle: "content",
+  refresh: true,
+  collapsible: true,
+  active: 0
+});
+
 
 //events
 
@@ -424,16 +431,13 @@ const publicSwiper = new Swiper(".public__swiper", {
     prevEl: ".public-prev"
   },
   breakpoints: {
-    320: {
-      slidesPerView: 7,
-      spaceBetween: 34,
-      grid: {
-        rows: 4,
-      },
-    },
+     320: {
+       spaceBetween: 30,
+
+     },
     321: {
       slidesPerView: 2,
-      spaceBetween: 34,
+      spaceBetween: 30,
     },
     768: {
       slidesPerView: 2,
@@ -450,36 +454,42 @@ const publicSwiper = new Swiper(".public__swiper", {
       slidesPerView: 3,
     },
   },
-
-
-
 });
 
+const publicPrev = document.getElementById('publicPrev')
+const publicNext = document.getElementById('publicNext')
+
+publicPrev.addEventListener('click', () => {
+  publicSwiper.eventsPrev();
+});
+publicNext.addEventListener('click', () => {
+  publicSwiper.eventsNext();
+});
 
 //public spoiler
 
-let btn = document.querySelector(".form-categories__title");
-let checklist = document.querySelector(".form-categories__list");
-btn.addEventListener("click", function() {
-  checklist.classList.toggle("form-categories__list--active");
-  document.querySelectorAll(".form-categories__label").forEach(el => {
-    el.classList.toggle("active");
-    let checkbox = el.querySelector(".form-categories__input");
+  let titleBtn = document.querySelector(".form-categories__title");
+  let checklist = document.querySelector(".form-categories__list");
+  titleBtn.addEventListener("click", function() {
+    checklist.classList.toggle("form-categories__list--active");
+    document.querySelectorAll(".form-categories__label").forEach(el => {
+       el.classList.toggle("active");
+       let checkbox = el.querySelector(".form-categories__input");
 
-    if (checkbox.checked) {
-      el.classList.add("active");
-    }
-  })
-});
-
-document.querySelectorAll(".form-categories__label").forEach(el => {
-  el.addEventListener("click", function() {
-    let label = this;
-    if (!checklist.classList.contains("form-categories__list--active")) {
-      label.classList.remove("active");
-    }
+       if (checkbox.checked) {
+         el.classList.add("active");
+       }
+     })
   });
-});
+
+  document.querySelectorAll(".form-categories__label").forEach(el => {
+    el.addEventListener("click", function() {
+      let label = this;
+      if (!checklist.classList.contains(".form-categories__list--active")) {
+        label.classList.remove("active");
+      }
+    });
+  });
 
 
 //projects
@@ -576,46 +586,97 @@ function init(){
 
 //contacts validate
 
-var selector = document.querySelector("input[type='tel']");
-var im = new Inputmask("+7 (999) 999-99-99");
+// var selector = document.querySelector("input[type='tel']");
+// var im = new Inputmask("+7 (999) 999-99-99");
 
-im.mask(selector);
+// im.mask(selector);
 
-const contactsFormValidation = new window.JustValidate('#form-contacts');
+// const contactsFormValidation = new window.JustValidate('#form-contacts');
 
-contactsFormValidation
-  .addField('#form-contacts__name', [
-    {
-      rule: 'required',
-      errorMessage: 'Обязательно для заполнения!',
-    },
+// contactsFormValidation
+//   .addField('#form-contacts__name', [
+//     {
+//       rule: 'required',
+//       errorMessage: 'Обязательно для заполнения!',
+//     },
 
-    {
-      rule: 'minLength',
-      value: 2,
-      errorMessage: 'Недопустимый формат'
-    },
-    {
-      rule: 'maxLength',
-      value: 30,
-      errorMessage: 'Недопустимый формат'
-    },
-  ])
-  .addField('#form-contacts__tel', [
-    {
-      rule: 'required',
-      errorMessage: 'Обязательно для заполнения!',
-    },
-    {
-      rule: 'number',
-      errorMessage: 'Недопустимый формат',
-    },
-  ]);
+//     {
+//       rule: 'minLength',
+//       value: 2,
+//       errorMessage: 'Недопустимый формат'
+//     },
+//     {
+//       rule: 'maxLength',
+//       value: 30,
+//       errorMessage: 'Недопустимый формат'
+//     },
+//   ])
+//   .addField('#form-contacts__tel', [
+//     {
+//       rule: 'required',
+//       errorMessage: 'Обязательно для заполнения!',
+//     },
+//     {
+//       rule: 'number',
+//       errorMessage: 'Недопустимый формат',
+//     },
+//   ]);
   // contactsFormValidation.addField('#text', [
   //   {
   //     validator: (value) => value[value.length - 1] === '.',
   //   },
   // ]);
+
+  var selector = document.querySelector("input[type='tel']");
+var im = new Inputmask("+7 (999) 999-99-99");
+im.mask(selector);
+
+function contactsFormValidation(selector, rules, succesModal) {
+	new window.JustValidate(selector, {
+		rules: rules,
+		messages: {
+			name: {
+				required: "Обязательно для заполнения!",
+				minLength: "Ваше имя должно содержать больше 2 символов"
+			},
+			tel: {
+				required: "Введите ваш телефон",
+				function: "Вы ввели не весь номер телефона"
+			}
+		},
+		// submitHandler: function (form, values, ajax) {
+		// 	console.log(form);
+
+		// 	let formData = new FormData(form);
+
+		// 	fetch("mail.php", {
+		// 		method: "POST",
+		// 		body: formData
+		// 	})
+		// 		.then(function (data) {
+		// 			console.log(data);
+		// 			thanksPopup();
+		// 			form.reset();
+		// 		});
+		// }
+	});
+}
+
+contactsFormValidation('#form-contacts', {
+	name: {
+		required: true,
+		minLength: 2,
+	},
+	tel: {
+		required: true,
+		function: (name, value) => {
+			const phone = selector.inputmask.unmaskedvalue();
+			return Number(phone) && phone.length === 10;
+		}
+	}
+},
+//'.modal-thanks'
+);
 
 
 
