@@ -95,12 +95,19 @@ document.addEventListener("click", function(e) {
 })
 })
 
-// стрелка на ххэдер бот
-document.querySelector(".header-bot__item_btn").addEventListener("click", function() {
-  document.querySelector(".header-bot__item_btn-image").classList.add("header-bot__item_btn-image--active");
-  this.classList.add("active");
+// стрелка на хэдер бот
+document.addEventListener("DomContentLoaded", function () {
+  document.querySelectorAll(".header-bot__item_btn").forEach
 })
-
+// document.querySelector(".header-bot__item_btn").addEventListener("click", function() {
+//   document.querySelector(".header-bot__item_btn-image").classList.add("header-bot__item_btn-image--active");
+//   this.classList.add("active");
+// })
+  // document.querySelectorAll(".header-bot__item_btn").forEach(item => {
+  //   item.addEventListener("click", function () {
+  //     document.querySelector(".header-bot__item_btn").classList.toggle('active')
+  //   })
+  // })
 
 //header form search
 
@@ -152,11 +159,6 @@ document.addEventListener("click", function(e) {
   }
 })
 
-
-
-
-
-
 // gallery select
 
 const element = document.querySelector('.gallery-form__list');
@@ -200,14 +202,6 @@ const gallerySwiper = new Swiper(".gallery__swiper", {
       },
       spaceBetween: 0
     },
-
-    // 500: {
-    //   slidesPerView: 2,
-    //   grid: {
-    //     rows: 1,
-    //   },
-    //   spaceBetween: 20
-    // },
 
      576: {
        slidesPerView: 2,
@@ -257,34 +251,6 @@ const gallerySwiper = new Swiper(".gallery__swiper", {
   // }
 });
 
-
-//tabs catalog
-
-// document.addEventListener ('DOMContentLoaded', function() {
-//   document.querySelectorAll('.title-row__btn').forEach(function(tabsBtn) {
-//     tabsBtn.addEventListener('click', function(event) {
-//       const path = event.currentTarget.dataset.path
-
-//       document.querySelectorAll('.catalog-main').forEach(function(tabContent) {
-//         tabContent.classList.remove('visible')
-//     })
-//     document.querySelector(`[data-target="${path}"]`).classList.add('visible')
-//   })
-//   })
-// })
-
-// document.addEventListener ('DOMContentLoaded', function() {
-//   document.querySelectorAll('.catalog-accordion__btn--tabs').forEach(function(tabsBtn) {
-//     tabsBtn.addEventListener('click', function(event) {
-//       const path = event.currentTarget.dataset.path
-
-//       document.querySelectorAll('.catalog-content__left').forEach(function(tabContent) {
-//         tabContent.classList.remove('visible')
-//     })
-//     document.querySelector(`[data-target="${path}"]`).classList.add('visible')
-//   })
-//   })
-// })
 
  document.addEventListener("DOMContentLoaded", function() {
    function tabsActive(tabPath, tabTarget) {
@@ -336,7 +302,6 @@ $("#accordion").accordion({
 const eventsSwiper = new Swiper(".events-swiper", {
   slidesPerView: 3,
   slidesPerGroup: 1,
-  //loop: true,
   grid: {
     rows: 1,
   },
@@ -586,97 +551,45 @@ function init(){
 
 //contacts validate
 
-// var selector = document.querySelector("input[type='tel']");
-// var im = new Inputmask("+7 (999) 999-99-99");
-
-// im.mask(selector);
-
-// const contactsFormValidation = new window.JustValidate('#form-contacts');
-
-// contactsFormValidation
-//   .addField('#form-contacts__name', [
-//     {
-//       rule: 'required',
-//       errorMessage: 'Обязательно для заполнения!',
-//     },
-
-//     {
-//       rule: 'minLength',
-//       value: 2,
-//       errorMessage: 'Недопустимый формат'
-//     },
-//     {
-//       rule: 'maxLength',
-//       value: 30,
-//       errorMessage: 'Недопустимый формат'
-//     },
-//   ])
-//   .addField('#form-contacts__tel', [
-//     {
-//       rule: 'required',
-//       errorMessage: 'Обязательно для заполнения!',
-//     },
-//     {
-//       rule: 'number',
-//       errorMessage: 'Недопустимый формат',
-//     },
-//   ]);
-  // contactsFormValidation.addField('#text', [
-  //   {
-  //     validator: (value) => value[value.length - 1] === '.',
-  //   },
-  // ]);
-
-  var selector = document.querySelector("input[type='tel']");
+var selector = document.querySelector("input[type='tel']");
 var im = new Inputmask("+7 (999) 999-99-99");
+
 im.mask(selector);
 
-function contactsFormValidation(selector, rules, succesModal) {
-	new window.JustValidate(selector, {
-		rules: rules,
-		messages: {
-			name: {
-				required: "Обязательно для заполнения!",
-				minLength: "Ваше имя должно содержать больше 2 символов"
-			},
-			tel: {
-				required: "Введите ваш телефон",
-				function: "Вы ввели не весь номер телефона"
-			}
-		},
-		// submitHandler: function (form, values, ajax) {
-		// 	console.log(form);
+const contactsFormValidation = new JustValidate('#form-contacts');
 
-		// 	let formData = new FormData(form);
+contactsFormValidation
+  .addField('#form-contacts__name', [
+    {
+      rule: 'minLength',
+      value: 2,
+      errorMessage: 'Имя слишком короткое',
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Имя слишком длинное',
+    },
+    {
+      rule: 'required',
+      errorMessage: 'Обязательно для заполнения!'
+    },
+  ])
+  .addField('#form-contacts__tel', [
+    {
+      rule: 'required',
+      errorMessage: 'Обязательно для заполнения!',
+    },
+    {
+      rule: "function",
+      validator: function (name, value) {
+        const phone = selector.inputmask.unmaskedvalue();
+        return phone.length === 10
+      },
+      errorMessage: 'Недопустимый формат',
+    }
+  ]);
 
-		// 	fetch("mail.php", {
-		// 		method: "POST",
-		// 		body: formData
-		// 	})
-		// 		.then(function (data) {
-		// 			console.log(data);
-		// 			thanksPopup();
-		// 			form.reset();
-		// 		});
-		// }
-	});
-}
-
-contactsFormValidation('#form-contacts', {
-	name: {
-		required: true,
-		minLength: 2,
-	},
-	tel: {
-		required: true,
-		function: (name, value) => {
-			const phone = selector.inputmask.unmaskedvalue();
-			return Number(phone) && phone.length === 10;
-		}
-	}
-},
-//'.modal-thanks'
-);
 
 
 
