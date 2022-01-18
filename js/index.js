@@ -1,10 +1,10 @@
 // бургер
 
-document.querySelector(".open-burger__btn").addEventListener("click", function() {
-  document.querySelector(".header-top__nav").classList.add("active");
+document.querySelector(".open-burger-btn").addEventListener("click", function() {
+  document.querySelector(".top-nav").classList.add("active");
 })
-document.querySelector(".close-burger__btn").addEventListener("click", function() {
-  document.querySelector(".header-top__nav").classList.remove("active");
+document.querySelector(".close-burger-btn").addEventListener("click", function() {
+  document.querySelector(".top-nav").classList.remove("active");
 })
 
 //hero swiper
@@ -57,22 +57,31 @@ new SimpleBar(document.querySelector(".dropdown-scroll-5"), {
   scrollbarMaxSize: 25,
 });
 
+//планый скролл по сайту
+
+const $page = $('html, body');
+$('a[href*="#"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 400);
+    return false;
+});
 
 //выпадающеи хедер-бот пункты
 
 document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll(".header-bot__item_btn").forEach(item => {
+  document.querySelectorAll(".dropdown-list__btn").forEach(item => {
   item.addEventListener("click", function() {
     let btn = this;
-    let dropdown = this.parentElement.querySelector(".header__dropdown-content");
+    let dropdown = this.parentElement.querySelector(".dropdown-list__content");
 
-    document.querySelectorAll(".header-bot__item_btn").forEach(el => {
+    document.querySelectorAll(".dropdown-list__btn").forEach(el => {
       if (el != btn) {
         el.classList.remove("active--btn");
       }
     });
 
-    document.querySelectorAll(".header__dropdown-content").forEach(el => {
+    document.querySelectorAll(".dropdown-list__content").forEach(el => {
       if (el != dropdown) {
         el.classList.remove("active-list--item");
       }
@@ -84,11 +93,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("click", function(e) {
   let target = e.target;
-  if (!target.closest(".header-bot__nav_list")) {
-    document.querySelectorAll(".header__dropdown-content").forEach(el => {
+  if (!target.closest(".bot-nav__list")) {
+    document.querySelectorAll(".dropdown-list__content").forEach(el => {
         el.classList.remove("active-list--item");
     })
-     document.querySelectorAll(".header-bot__item_btn").forEach(el => {
+     document.querySelectorAll(".dropdown-list__btn").forEach(el => {
         el.classList.remove("active--btn");
     });
   }
@@ -97,65 +106,71 @@ document.addEventListener("click", function(e) {
 
 // стрелка на хэдер бот
 document.addEventListener("DomContentLoaded", function () {
-  document.querySelectorAll(".header-bot__item_btn").forEach
+  document.querySelectorAll(".dropdown-list__btn").forEach
 })
-// document.querySelector(".header-bot__item_btn").addEventListener("click", function() {
-//   document.querySelector(".header-bot__item_btn-image").classList.add("header-bot__item_btn-image--active");
+// document.querySelector(".dropdown-list__btn").addEventListener("click", function() {
+//   document.querySelector(".dropdown-list__btn-image").classList.add("dropdown-list__btn-image--active");
 //   this.classList.add("active");
 // })
-  // document.querySelectorAll(".header-bot__item_btn").forEach(item => {
+  // document.querySelectorAll(".dropdown-list__btn").forEach(item => {
   //   item.addEventListener("click", function () {
-  //     document.querySelector(".header-bot__item_btn").classList.toggle('active')
+  //     document.querySelector(".dropdown-list__btn").classList.toggle('active')
   //   })
   // })
 
 //header form search
 
-document.querySelector(".header-search__open").addEventListener("click", function() {
-  document.querySelector(".header-form").classList.add("header-form__active");
-  document.querySelector(".header-logo").classList.add("header-logo__none");
-  document.querySelector(".open-burger__btn").classList.add("open-burger__btn--none");
-  document.querySelector(".header-search__close").classList.add("header-search__close--block")
-  this.classList.add("active");
-})
+ document.querySelector(".form-content__open").addEventListener("click", function() {
+   document.querySelector(".form-content__open").classList.add("active");
+   document.querySelector(".form-top").classList.add("form-top__active");
+   document.querySelector(".header-logo").classList.add("header-logo__none");
+   document.querySelector(".open-burger-btn").classList.add("open-burger-btn--none");
+   //document.querySelector(".form-top__close").classList.add("form-top__close--block");
+   this.classList.add("active");
+ });
+
+ document.addEventListener("click", function(e) {
+   let target = e.target;
+   let form = document.querySelector(".form-top");
+   if (!target.closest(".form-content")) {
+   form.classList.remove("form-top__active");
+     form.querySelector(".form-top__input").value = "";
+     document.querySelector(".form-content__open").classList.remove("active")
+   }
+   if (target.closest(".form-top__close")) {
+    form.classList.remove("form-top__active");
+    form.querySelector(".form-top__input").value = "";
+    document.querySelector(".form-content__open").classList.remove("active");
+    document.querySelector(".header-logo").classList.remove("header-logo__none");
+    document.querySelector(".open-burger-btn").classList.remove("open-burger-btn--none");
+   }
+ });
 
 //попытки скрыть крестик при клике
-// document.querySelector(".header-search__close").addEventListener("click", function() {
+// document.querySelector(".form-bot__close").addEventListener("click", function() {
 //   document.querySelector(".header-form").classList.remove("header-form__active");
-//   document.querySelector(".header-search__close").classList.remove("header-search__close--block");
-//   document.querySelector(".header-search__open").classList.remove("active");
+//   document.querySelector(".form-bot__close").classList.remove("form-bot__close--block");
+//   document.querySelector(".header-form-content__open").classList.remove("active");
 
 // })
-
-
-document.addEventListener("click", function(e) {
-  let target = e.target;
-  let form = document.querySelector(".header-form");
-  if (!target.closest(".header-form__content")) {
-  form.classList.remove("header-form__active");
-    form.querySelector(".header-form__input").value = "";
-    document.querySelector(".header-search__open").classList.remove("active")
-  }
-})
-
 
 //возвращается логотип по клику на экран
 document.addEventListener("click", function(e) {
   let target = e.target;
   let logo = document.querySelector(".header-logo");
-  if (!target.closest(".header-form__content")) {
+  if (!target.closest(".header-form-content")) {
   logo.classList.remove("header-logo__none");
-    document.querySelector(".header-search__open").classList.remove("active")
+    document.querySelector(".form-content__open").classList.remove("active")
   }
 })
 
 //возвращается кнопка бургера по клику на экран
 document.addEventListener("click", function(e) {
   let target = e.target;
-  let burgerBtn = document.querySelector(".open-burger__btn");
-  if (!target.closest(".header-form__content")) {
-    burgerBtn.classList.remove("open-burger__btn--none");
-    document.querySelector(".header-search__open").classList.remove("active")
+  let burgerBtn = document.querySelector(".open-burger-btn");
+  if (!target.closest(".header-form-content")) {
+    burgerBtn.classList.remove("open-burger-btn--none");
+    document.querySelector(".form-content__open").classList.remove("active")
   }
 })
 
@@ -166,10 +181,10 @@ const element = document.querySelector('.gallery-form__list');
       searchEnabled: false
     });
 
-const element1 = document.querySelector('.gallery-form__list--320');
-    const choices1 = new Choices(element1, {
-      searchEnabled: false
-    });
+// const element1 = document.querySelector('.gallery-form__list--320');
+//     const choices1 = new Choices(element1, {
+//       searchEnabled: false
+//     });
 
 
 
@@ -177,7 +192,7 @@ const element1 = document.querySelector('.gallery-form__list--320');
 
 //gallery swiper
 
-const gallerySwiper = new Swiper(".gallery__swiper", {
+const gallerySwiper = new Swiper(".gallery-swiper", {
   slidesPerView: 3,
   slidesPerGroup: 3,
   grid: {
@@ -185,7 +200,7 @@ const gallerySwiper = new Swiper(".gallery__swiper", {
   },
   spaceBetween: 50,
   pagination: {
-    el: ".gallery-swiper__pagination",
+    el: ".gallery-swiper-pagination",
     type: "fraction"
   },
   navigation: {
@@ -279,12 +294,26 @@ $(function () {
   $(".accordion-plug").accordion();
 });
 
+$( ".accordion-plug" ).accordion({
+  heightStyle: "content",
+});
+
+const heightStylePlug = $( ".accordion-plug" ).accordion( "option", "heightStyle" );
+
+$(".accordion-plug").accordion({
+  heightStyle: "content",
+  refresh: true,
+  collapsible: true,
+  animate: 400,
+  //active: 0,
+});
+
 $(function () {
   $("#accordion").accordion();
 });
 
 $( "#accordion" ).accordion({
-  heightStyle: "contant"
+  heightStyle: "content",
 });
 
 const heightStyle = $( "#accordion" ).accordion( "option", "heightStyle" );
@@ -293,7 +322,8 @@ $("#accordion").accordion({
   heightStyle: "content",
   refresh: true,
   collapsible: true,
-  active: 0
+  animate: 400,
+  //active: 0,
 });
 
 
@@ -305,9 +335,8 @@ const eventsSwiper = new Swiper(".events-swiper", {
   grid: {
     rows: 1,
   },
-  spaceBetween: 50,
   pagination: {
-    el: ".events-swiper__pagination",
+    el: ".events-swiper-pagination",
     type: "bullets",
     clickable: true,
   },
@@ -350,11 +379,15 @@ const eventsSwiper = new Swiper(".events-swiper", {
        },
        spaceBetween: 27,
      },
+
+     1900: {
+      spaceBetween: 50,
+     }
     },
 
-   a11y: {
-     prevSlideMessage: 'Предыдущий',
-     nextSlideMessage: 'Следующий',
+  a11y: {
+    prevSlideMessage: 'Предыдущий',
+    nextSlideMessage: 'Следующий',
    }
 
   // on: {
@@ -379,7 +412,7 @@ eventsNext.addEventListener('click', () => {
 
 // public
 
-const publicSwiper = new Swiper(".public__swiper", {
+const publicSwiper = new Swiper(".public-swiper", {
   slidesPerView: 3,
   slidesPerGroup: 1,
   grid: {
@@ -498,6 +531,8 @@ tippy('#projects-tooltip1', {
   content: 'Пример современных тенденций - современная методология разработки',
   maxWidth: 264,
   theme: 'lilac',
+  //hideOnClick: false,
+  //trigger: 'click',
 });
 
 tippy('#projects-tooltip2', {
@@ -519,32 +554,19 @@ tippy('#projects-tooltip3', {
 
 ymaps.ready(init);
 function init(){
-    // Создание карты.
     var myMap = new ymaps.Map("map", {
-        // Координаты центра карты.
-        // Порядок по умолчанию: «широта, долгота».
-        // Чтобы не определять координаты центра карты вручную,
-        // воспользуйтесь инструментом Определение координат.
-        center: [55.75846806898367,37.60108849999989],
-        // Уровень масштабирования. Допустимые значения:
-        // от 0 (весь мир) до 19.
-        zoom: 17
-
+        center: [55.758463,37.601079],
+        zoom: 13,
     });
+    myMap.behaviors.disable('scrollZoom'),
     myPlacemark = new ymaps.Placemark(myMap.getCenter([55.75846806898367,37.60108849999989]), {
-      hintContent: 'Собственный значок метки',
-      balloonContent: 'Это красивая метка'
+      balloonContentHeader: "Шоурум №4",
+      balloonContentBody: "Леонтьевский переулок, дом 5, строение 1"
     }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
       iconLayout: 'default#image',
-      // Своё изображение иконки метки.
       iconImageHref: 'img/contacts/icon-map.svg',
-      // Размеры метки.
       iconImageSize: [20, 20],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
-      //iconImageOffset: [-5, -38]
+      iconImageOffset: [0, 0],
     })
     myMap.geoObjects.add(myPlacemark);
 }
