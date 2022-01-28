@@ -181,14 +181,6 @@ const element = document.querySelector('.gallery-form__list');
       searchEnabled: false
     });
 
-// const element1 = document.querySelector('.gallery-form__list--320');
-//     const choices1 = new Choices(element1, {
-//       searchEnabled: false
-//     });
-
-
-
-
 
 //gallery swiper
 
@@ -221,10 +213,12 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
      576: {
        slidesPerView: 2,
        grid: {
-         rows: 1,
+         rows: 2,
        },
        spaceBetween: 30,
      },
+
+
 
      700: {
       slidesPerView: 2,
@@ -266,27 +260,27 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
   // }
 });
 
+//catalog tabs
+document.addEventListener("DOMContentLoaded", function() {
+  function tabsActive(tabPath, tabTarget) {
+    document.querySelectorAll(tabPath).forEach(item => {
+    item.addEventListener("click", function(e) {
+      let path = e.currentTarget.dataset.path;
+      document.querySelectorAll(tabTarget).forEach(el => {
+        el.classList.remove("visible");
+      });
+      document.querySelectorAll(tabPath).forEach(el => {
+        el.classList.remove("visible");
+      });
+      document.querySelector(`[data-target="${path}"]`).classList.add("visible");
 
- document.addEventListener("DOMContentLoaded", function() {
-   function tabsActive(tabPath, tabTarget) {
-     document.querySelectorAll(tabPath).forEach(item => {
-     item.addEventListener("click", function(e) {
-       let path = e.currentTarget.dataset.path;
-       document.querySelectorAll(tabTarget).forEach(el => {
-         el.classList.remove("visible");
-       });
-       document.querySelectorAll(tabPath).forEach(el => {
-         el.classList.remove("visible");
-       });
-       document.querySelector(`[data-target="${path}"]`).classList.add("visible");
-
-       this.classList.add("visible");
-     })
-   });
-   };
-   tabsActive(".title-row__btn", ".catalog-main");
-   tabsActive(".catalog-accordion__btn--tabs", ".catalog-content__left");
- })
+      this.classList.add("visible");
+    })
+  });
+  };
+  tabsActive(".title-row__btn", ".catalog-main");
+  tabsActive(".catalog-accordion__btn-tabs", ".catalog-content__left");
+});
 
 // accordion catalog
 
@@ -328,7 +322,6 @@ $("#accordion").accordion({
 
 
 //events
-
 const eventsSwiper = new Swiper(".events-swiper", {
   slidesPerView: 3,
   slidesPerGroup: 1,
@@ -371,18 +364,27 @@ const eventsSwiper = new Swiper(".events-swiper", {
       spaceBetween: 34,
     },
 
-     1024: {
-       slidesPerView: 3,
-       slidesPerGroup: 3,
-       grid: {
-         rows: 1
-       },
-       spaceBetween: 27,
-     },
+    769: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      grid: {
+        rows: 1,
+      },
+      spaceBetween: 27,
+    },
 
-     1900: {
-      spaceBetween: 50,
-     }
+    1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 27,
+    },
+
+    1900: {
+    spaceBetween: 50,
+    }
     },
 
   a11y: {
@@ -431,12 +433,15 @@ const publicSwiper = new Swiper(".public-swiper", {
   breakpoints: {
      320: {
        spaceBetween: 30,
+       allowTouchMove: false,
 
      },
-    321: {
+      321: {
       slidesPerView: 2,
       spaceBetween: 30,
+      allowTouchMove: true,
     },
+
     768: {
       slidesPerView: 2,
       spaceBetween: 34,
@@ -503,25 +508,34 @@ const projectsSwiper = new Swiper(".projects-swiper", {
     nextEl: ".projects-next",
     prevEl: ".projects-prev"
   },
+
   breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    576: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      spaceBetween: 34,
+    },
+    // 577: {
+    //   slidesPerView: 2,
+    //   grid: {
+    //     rows: 1,
+    //   },
+    //   spaceBetween: 10,
+    //  },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      spaceBetween: 40,
+    },
     1201: {
       slidesPerView: 3,
       slidesPerGroup: 1,
       spaceBetween: 50,
     },
-    768: {
-      slidesPerView: 2,
-      slidesPerGroup: 1,
-      spaceBetween: 50,
-    },
-    321: {
-      slidesPerView: 2,
-      slidesPerGroup: 1,
-      spaceBetween: 34,
-    },
-    320: {
-      slidesPerView: 1,
-    }
   }
 });
 
