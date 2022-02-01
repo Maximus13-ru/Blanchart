@@ -63,7 +63,7 @@ const $page = $('html, body');
 $('a[href*="#"]').click(function() {
     $page.animate({
         scrollTop: $($.attr(this, 'href')).offset().top
-    }, 400);
+    }, 600);
     return false;
 });
 
@@ -108,15 +108,6 @@ document.addEventListener("click", function(e) {
 document.addEventListener("DomContentLoaded", function () {
   document.querySelectorAll(".dropdown-list__btn").forEach
 })
-// document.querySelector(".dropdown-list__btn").addEventListener("click", function() {
-//   document.querySelector(".dropdown-list__btn-image").classList.add("dropdown-list__btn-image--active");
-//   this.classList.add("active");
-// })
-  // document.querySelectorAll(".dropdown-list__btn").forEach(item => {
-  //   item.addEventListener("click", function () {
-  //     document.querySelector(".dropdown-list__btn").classList.toggle('active')
-  //   })
-  // })
 
 //header form search
 
@@ -145,14 +136,6 @@ document.addEventListener("DomContentLoaded", function () {
     document.querySelector(".open-burger-btn").classList.remove("open-burger-btn--none");
    }
  });
-
-//попытки скрыть крестик при клике
-// document.querySelector(".form-bot__close").addEventListener("click", function() {
-//   document.querySelector(".header-form").classList.remove("header-form__active");
-//   document.querySelector(".form-bot__close").classList.remove("form-bot__close--block");
-//   document.querySelector(".header-form-content__open").classList.remove("active");
-
-// })
 
 //возвращается логотип по клику на экран
 document.addEventListener("click", function(e) {
@@ -193,7 +176,7 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
   spaceBetween: 50,
   pagination: {
     el: ".gallery-swiper-pagination",
-    type: "fraction"
+    type: "fraction",
   },
   navigation: {
     nextEl: ".gallery-next",
@@ -207,21 +190,21 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
       grid: {
         rows: 1
       },
-      spaceBetween: 0
+      spaceBetween: 0,
     },
 
      576: {
        slidesPerView: 2,
+       slidesPerGroup: 2,
        grid: {
          rows: 2,
        },
        spaceBetween: 30,
      },
 
-
-
      700: {
       slidesPerView: 2,
+      slidesPerGroup: 2,
       grid: {
         rows: 2,
       },
@@ -230,6 +213,7 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
 
      1200: {
        slidesPerView: 2,
+       slidesPerGroup: 2,
        grid: {
          rows: 2
        },
@@ -249,15 +233,6 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
      prevSlideMessage: 'Предыдущий',
      nextSlideMessage: 'Следующий',
    }
-
-  // on: {
-  //   /* исправляет баг с margin-top остающимся при смене брейкпоинта, это было нужно в 6-й версии свайпера */
-  //   beforeResize: function () {
-  //     this.slides.forEach((el) => {
-  //       el.style.marginTop = "";
-  //     });
-  //   }
-  // }
 });
 
 //catalog tabs
@@ -284,8 +259,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // accordion catalog
 
-$(function () {
-  $(".accordion-plug").accordion();
+$( function () {
+  $( ".accordion-plug" ).accordion();
 });
 
 $( ".accordion-plug" ).accordion({
@@ -302,9 +277,9 @@ $(".accordion-plug").accordion({
   //active: 0,
 });
 
-$(function () {
-  $("#accordion").accordion();
-});
+$( function() {
+  $( "#accordion" ).accordion();
+} );
 
 $( "#accordion" ).accordion({
   heightStyle: "content",
@@ -450,7 +425,6 @@ const publicSwiper = new Swiper(".public-swiper", {
     1024: {
       slidesPerView: 2,
       spaceBetween: 50,
-
     },
 
     1201: {
@@ -488,11 +462,12 @@ publicNext.addEventListener('click', () => {
   document.querySelectorAll(".form-categories__label").forEach(el => {
     el.addEventListener("click", function() {
       let label = this;
-      if (!checklist.classList.contains(".form-categories__list--active")) {
+      if (checklist.classList.contains(".form-categories__list--active")) {
         label.classList.remove("active");
       }
     });
   });
+
 
 
 //projects
