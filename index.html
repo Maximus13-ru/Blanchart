@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Blanchart - художественная галерея</title>
 
   <link rel="shortcut icon" href="img/svg/favicon.svg" type="image/x-icon">
@@ -376,7 +377,6 @@
 
     <section id="gallery" class="gallery">
       <div class="container gallery__container">
-
         <div class="gallery-content">
           <div class="gallery-left">
             <h2 class="title gallery-left__title">
@@ -398,6 +398,7 @@
             </p>
           </div>
           <div class="gallery-right">
+
             <div class="gallery-swiper-main">
               <div class="gallery-navigation-btn">
                 <button class="btn-reset gallery-prev gallery-btn" aria-label="Листать назад">
@@ -408,9 +409,82 @@
                   <img src="img/gallery/arrow-next.svg" alt="Кнопка вперёд">
                 </button>
               </div>
+              <div class="modal" id="modal-malevich">
+                <div class="modal__container">
+                  <div class="modal__content">
+                    <div class="modal-left">
+                      <picture>
+                        <source media="(max-width: 576px)" srcset="img/adaptive/gallery/320/modal.jpg">
+                        <source media="(max-width: 768px)" srcset="img/adaptive/gallery/768/modal.jpg">
+                        <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/modal.jpg">
+                        <img class="modal-left__image" src="img/gallery/modal.jpg" alt="модал">
+                      </picture>
+                    </div>
+                    <div class="modal-right">
+                      <div class="modal-right__top">
+                        <h3 class="modal-right__title subtitle">
+                          Казимир Малевич
+                        </h3>
+                        <div class="modal-right__pic-name">
+                          "Женщина с граблями"
+                        </div>
+                        <div class="modal-right__pic-date">
+                          1931-1932
+                        </div>
+                      </div>
+                      <p class="modal-right__descr descr">
+                        Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в
+                        1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.
+                      </p>
+                    </div>
+                    <button class="btn-reset modal__close">
+                      <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -0.000125032L15.3334 15.3041L14.6667 15.9998L5.76143e-05 0.695522L0.666725 -0.000125032Z" fill="black"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-plug modal" id="modal-plug">
+                <div class="modal-plug__container modal__container">
+                  <div class="modal-plug__content modal__content">
+                    <div class="modal-plug__left modal-left">
+                      <picture>
+                        <source media="(max-width: 576px)" srcset="img/adaptive/gallery/320/modal.jpg">
+                        <source media="(max-width: 768px)" srcset="img/adaptive/gallery/768/modal.jpg">
+                        <source media="(max-width: 1200px)" srcset="img/adaptive/gallery/1024/modal.jpg">
+                        <img class="modal-left__image" src="img/gallery/modal.jpg" alt="пустое изображение">
+                      </picture>
+                    </div>
+                    <div class="modal-right modal-plug__right">
+                      <div class="modal-right__top">
+                        <h3 class="modal-right__title subtitle">
+                          Описание отсутствует
+                        </h3>
+                        <div class="modal-right__pic-name">
+                          Неизвестно
+                        </div>
+                        <div class="modal-right__pic-date">
+                          Неизвестно
+                        </div>
+                      </div>
+                      <p class="modal-right__descr descr">
+                        ...
+                      </p>
+                    </div>
+                    <button class="btn-reset modal__close modal__close-plug">
+                      <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -0.000125032L15.3334 15.3041L14.6667 15.9998L5.76143e-05 0.695522L0.666725 -0.000125032Z" fill="black"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
               <div class="swiper gallery-swiper">
                 <div class="swiper-wrapper gallery-swiper__wrapper">
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_1 "
+                  <button id="malevich" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_1 "
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 480px)" srcset="img/adaptive/gallery/320/slide1.jpg">
@@ -420,7 +494,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_2 "
+                  <button id="plug-modal1" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_2 "
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide2.jpg">
@@ -430,7 +504,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_3 "
+                  <button id="plug-modal2" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_3 "
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide3.jpg">
@@ -440,7 +514,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_4 "
+                  <button id="plug-modal3" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_4 "
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide4.jpg">
@@ -450,7 +524,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_5 "
+                  <button id="plug-modal4" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_5 "
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide5.jpg">
@@ -460,7 +534,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_6 "
+                  <button id="plug-modal5" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_6 "
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide6.jpg">
@@ -470,7 +544,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_7"
+                  <button id="plug-modal6" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_7"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide7.jpg">
@@ -480,7 +554,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_8"
+                  <button id="plug-modal7" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_8"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide8.jpg">
@@ -490,7 +564,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_9"
+                  <button id="plug-modal8" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_9"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide9.jpg">
@@ -500,7 +574,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_10"
+                  <button id="plug-modal9" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_10"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide10.jpg">
@@ -510,7 +584,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_11"
+                  <button id="plug-modal10" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_11"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide11.jpg">
@@ -520,7 +594,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_12"
+                  <button id="plug-modal11" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_12"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide12.jpg">
@@ -530,7 +604,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_13"
+                  <button id="plug-modal12" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_13"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide13.jpg">
@@ -540,7 +614,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_14"
+                  <button id="plug-modal13" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_14"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide14.jpg">
@@ -550,7 +624,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_15"
+                  <button id="plug-modal14" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_15"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide15.jpg">
@@ -560,7 +634,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_16"
+                  <button id="plug-modal15" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_16"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide16.jpg">
@@ -570,7 +644,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_17"
+                  <button id="plug-modal16" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_17"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide17.jpg">
@@ -580,7 +654,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_18"
+                  <button id="plug-modal17" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_18"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide18.jpg">
@@ -590,7 +664,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_19"
+                  <button id="plug-modal18" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_19"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide19.jpg">
@@ -600,7 +674,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_20"
+                  <button id="plug-modal19" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_20"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide20.jpg">
@@ -610,7 +684,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_21"
+                  <button id="plug-modal20" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_21"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide21.jpg">
@@ -620,7 +694,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_22"
+                  <button id="plug-modal21" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_22"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide22.jpg">
@@ -630,7 +704,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_23"
+                  <button id="plug-modal22" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_23"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide23.jpg">
@@ -640,7 +714,7 @@
                         class="gallery-swiper__slide-image">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_24"
+                  <button id="plug-modal23" class="btn-reset swiper-slide gallery-swiper__slide gallery-swiper__slide_24"
                     aria-label="Картина художника">
                     <picture>
                       <source media="(max-width: 500px)" srcset="img/adaptive/gallery/320/slide24.jpg">
@@ -1734,7 +1808,7 @@
               Леонтьевский переулок, дом 5/1
             </div>
           </div>
-          <form action="!#" id="form-contacts" class="contacts-top__form form-contacts">
+          <form action="#" method="post" id="form-contacts" class="contacts-top__form form-contacts">
             <label class="form-contacts__label">
               <input type="text" name="Имя" class="form-contacts__input" id="form-contacts__name" placeholder="Имя*"
                 data-validate-field="name" required>
@@ -1889,33 +1963,9 @@
     </div>
   </footer>
 
-  <!-- <div class="modal">
-    <div class="modal-left">
-      <img src="img/gallery/modal.jpg" alt="модал">
-    </div>
-    <div class="modal-right">
-      <div class="modal-right__top">
-        <h3 class="modal-right__title">
-          Казимир Малевич
-        </h3>
-        <span class="modal-right__pic-name">
-          "Женщина с граблями"
-        </span>
-        <span class="modal-right__pic-date">
-          1931-1932
-        </span>
-      </div>
-      <p class="modal-right__descr descr">
-        Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в
-        1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.
-      </p>
-    </div>
-  </div> -->
-  <!-- <script src="js/jquery.js"></script>
-  <script src="js/jquery-ui.min.js"></script> -->
-  <script src="js/inputmask.min.js"></script>
 
-  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="js/inputmask.min.js"></script>
+  <!-- <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script> -->
   <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
   <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
   <script src="js/choices.min.js"></script>
@@ -1923,9 +1973,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.6/simplebar.min.js"
     integrity="sha512-rn0CaCtyheymRT43p0ZuFH0SvNriLU5cuJpY2f4IcyLrbHzJdsIF1dygi9oNha1BhHagO8U+h2xRWCosYf9gCg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script src="js/just-validate.min.js"></script> -->
+  <script src="js/just-validate.production.min.js"></script>
   <script src="js/jquery.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/index.js"></script>
+
 </body>
 
 </html>

@@ -116,7 +116,6 @@ document.addEventListener("DomContentLoaded", function () {
    document.querySelector(".form-top").classList.add("form-top__active");
    document.querySelector(".header-logo").classList.add("header-logo__none");
    document.querySelector(".open-burger-btn").classList.add("open-burger-btn--none");
-   //document.querySelector(".form-top__close").classList.add("form-top__close--block");
    this.classList.add("active");
  });
 
@@ -234,6 +233,100 @@ const gallerySwiper = new Swiper(".gallery-swiper", {
      nextSlideMessage: 'Следующий',
    }
 });
+
+//gallery modal window
+
+//const openModal = document.querySelectorAll('.gallery-swiper__slide');
+// openModal.forEach(item => {
+//   item.addEventListener('click', function() {
+//     document.querySelector('.modal').classList.add('active');
+//   })
+// })
+const closeModal = document.querySelector('.modal__close');
+const closeModalPlug = document.querySelector('.modal__close-plug');
+
+
+document.querySelector('#malevich').addEventListener('click', () => {
+  document.querySelector('#modal-malevich').classList.add('active');
+});
+document.querySelector('#plug-modal1').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal2').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal3').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal4').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal5').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal6').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal7').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal8').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal9').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal10').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal11').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal12').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal13').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal14').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal15').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal16').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal17').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal18').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal19').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal20').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal21').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal22').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+document.querySelector('#plug-modal23').addEventListener('click', () => {
+  document.querySelector('#modal-plug').classList.add('active');
+});
+
+
+closeModal.addEventListener('click', () => {
+  document.querySelector('.modal').classList.remove('active');
+})
+closeModalPlug.addEventListener('click', () => {
+  document.querySelector('.modal-plug').classList.remove('active');
+
+})
 
 //catalog tabs
 document.addEventListener("DOMContentLoaded", function() {
@@ -598,8 +691,30 @@ contactsFormValidation
         return phone.length === 10
       },
       errorMessage: 'Недопустимый формат',
+    },
+  ]).onSuccess((event) => {
+    //console.log('Validation passes and form submitted');
+
+    let formData = new FormData(event.target);
+
+    console.log(...formData);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log('Отправлено');
+          alert('Cooбщение отправелено')
+        }
+      }
     }
-  ]);
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+
+    event.target.reset();
+  });
 
 
 
